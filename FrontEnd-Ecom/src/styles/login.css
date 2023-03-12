@@ -13,7 +13,7 @@
   justify-content: center;
   text-align: center;
   gap: 10px;
-  background-color: #fff;
+  background-color: rgb(172, 171, 171);
   height: 400px;
   padding: 20px;
   margin: auto;
@@ -39,20 +39,20 @@ p {
 .Login button:active {
   background-color: #065aa3;
 }
-.logo-img{
+.logo-img {
   width: 150px;
   float: left;
 }
-.logo{
+.logo {
   border-bottom: 0.2px solid black;
 }
-.border{
+.border {
   width: 100%;
   border-top: 1px solid #333;
 }
-.b{
+.b {
   background-color: #fff;
-  border: 1px solid #A7F65C;
+  border: 1px solid #a7f65c;
   width: 100%;
   color: #003585;
 }

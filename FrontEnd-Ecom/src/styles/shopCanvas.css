@@ -17,7 +17,26 @@
     width: 65% !important;
   }
 }
-
+.shopbtn {
+  position: relative;
+  border: none;
+}
+.frame {
+  width: 40px;
+  height: 25px;
+}
+.frame-round {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  padding-right: 1px;
+  padding-top: 1px;
+  position: absolute;
+  top: 2px;
+  right: -8px;
+  color: black;
+  font-size: 13px;
+}
 .shop-canvas-prod .descr {
   padding-left: 10px;
   width: 80%;
@@ -32,7 +51,7 @@
 }
 .shop-canvas-prod .delete-button {
   border: none;
-  background-color: #fff;
+  background-color: #ccc;
   float: right;
   width: 10%;
 }
@@ -81,7 +100,6 @@
 .total-price {
   display: flex;
   width: 95%;
-
   font-weight: 500;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -100,7 +118,6 @@
   width: 20px;
   height: 0px;
 }
-
 .modal-body .label {
   width: 100px;
 }

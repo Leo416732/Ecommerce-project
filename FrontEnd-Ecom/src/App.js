@@ -7,6 +7,7 @@ import Main from "./pages/Main";
 import Settings from "./pages/Settings";
 import { useContext } from "react";
 import { ThemeContext } from "./context/Theme";
+import "./styles/theme.css";
 
 function App() {
   const { themeMode } = useContext(ThemeContext);

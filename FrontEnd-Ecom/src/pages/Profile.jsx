@@ -1,6 +1,6 @@
 import Products from "./Products";
 import SpecialProduct from "../components/sub-component/SpecialProduct";
-import "../style/main.css";
+import "../styles/main.css";
 import CarouselProd from "../components/sub-component/CarouselProd";
 import { useContext } from "react";
 import { ThemeContext } from "../context/Theme";

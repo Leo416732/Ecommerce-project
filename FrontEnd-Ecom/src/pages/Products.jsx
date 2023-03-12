@@ -1,5 +1,5 @@
 import Product from "./Product";
-import "../style/products.css";
+import "../styles/products.css";
 import { Categories } from "../util/data";
 import { useState, useContext } from "react";
 import { ProductContext } from "../context/ProductsContext";

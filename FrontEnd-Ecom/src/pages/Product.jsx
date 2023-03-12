@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ThemeContext } from "../context/Theme";
-import "../style/product.css";
+import "../styles/product.css";
 
 export default function Product(prop) {
   const navigate = useNavigate();

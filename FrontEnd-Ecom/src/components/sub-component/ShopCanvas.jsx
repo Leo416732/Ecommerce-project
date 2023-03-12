@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Checkout from "./Checkout";
 import { BasketContext } from "../../context/BasketsContext";
@@ -7,7 +6,7 @@ import Basket from "../../icons/Basket";
 import CLose from "../../icons/Close";
 import Empty from "../../icons/Empty";
 import Shop from "../../icons/Shop";
-import "../../style/shopCanvas.css";
+import "../../styles/shopCanvas.css";
 import { ThemeContext } from "../../context/Theme";
 
 export default function ShopCanvas() {

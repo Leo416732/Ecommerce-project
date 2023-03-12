@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ProductContext } from "../../context/ProductsContext";
 import Product from "../../pages/Product";
-import "../../style/special.css";
+import "../../styles/special.css";
 
 export default function SpecialProduct() {
   const { data } = useContext(ProductContext);

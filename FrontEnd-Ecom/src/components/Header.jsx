@@ -5,7 +5,7 @@ import Logo from "../icons/Logo";
 import Profile from "../icons/Profile";
 import Shop from "../icons/Shop";
 import ShopCanvas from "./sub-component/ShopCanvas";
-import "../style/header.css";
+import "../styles/header.css";
 import { ThemeContext } from "../context/Theme";
 
 export default function Header() {

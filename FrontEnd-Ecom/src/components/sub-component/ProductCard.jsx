@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Product from "../../pages/Product";
 import { ProductContext } from "../../context/ProductsContext";
-import "../../style/productcard.css";
+import "../../styles/productcard.css";
 import { ThemeContext } from "../../context/Theme";
 
 export default function ProductCard() {

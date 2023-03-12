@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../context/Theme";
 import { UserContext } from "../context/UsersContext";
-import "../style/login.css";
+import "../styles/login.css";
 
 export default function Login() {
   const { loginHandler } = useContext(UserContext);

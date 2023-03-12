@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { useNavigate } from "react-router-dom";
 import { ProductContext } from "../../context/ProductsContext";
-import "../../style/slider.css";
+import "../../styles/slider.css";
 
 function CarouselProd() {
   const { data } = useContext(ProductContext);

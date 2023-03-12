@@ -1,0 +1,51 @@
+.light {
+  background-color: #fff;
+  color: #000;
+}
+.dark {
+  background-color: #242526;
+  color: rgb(172, 171, 171);
+}
+.lightInput {
+  background-color: #fff;
+  color: #000;
+}
+.darkInput {
+  background-color: #fff;
+  color: #000;
+}
+.frameLight {
+  background-color: #fff;
+}
+.frameDark {
+  background-color: rgb(172, 171, 171);
+}
+.headerDark {
+  background-color: #051123;
+  padding: 5px;
+}
+.headerLight {
+  background-color: #003585;
+  padding: 5px;
+}
+.cardLight {
+  background-color: #fff;
+}
+.cardDark {
+  background-color: #595555;
+}
+.cardDark:hover {
+  background-color: #403e3e;
+}
+.buyDark {
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: 150px;
+  margin-top: 20px;
+}
+.buyDark:hover {
+  background-color: rgb(164, 160, 160);
+}

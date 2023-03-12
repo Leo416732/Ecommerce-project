@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import Product from "./Product";
 import { ProductContext } from "../context/ProductsContext";
-import "../style/search.css";
+import "../styles/search.css";
 
 export default function Search() {
   const { data } = useContext(ProductContext);

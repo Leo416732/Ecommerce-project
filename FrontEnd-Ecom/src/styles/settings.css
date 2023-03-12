@@ -56,23 +56,6 @@ h5 {
   padding-top: 50px;
   border-top: 1px solid #ccc;
 }
-
-.light {
-  background-color: #fff;
-  color: #000;
-}
-.dark {
-  background-color: #000;
-  color: rgb(172, 171, 171);
-}
-.lightInput {
-  background-color: #fff;
-  color: #000;
-}
-.darkInput {
-  background-color: rgb(172, 171, 171);
-  color: #fff;
-}
 .saveBtn {
   margin-top: 10px;
 }

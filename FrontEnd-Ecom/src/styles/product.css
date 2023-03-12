@@ -12,16 +12,6 @@
 .cardLight:hover {
   background-color: #f7f7f7;
 }
-
-.cardLight {
-  background-color: #fff;
-}
-.cardDark {
-  background-color: #807a7a;
-}
-.cardDark:hover {
-  background-color: #595555;
-}
 .card-title {
   color: #003585;
 }

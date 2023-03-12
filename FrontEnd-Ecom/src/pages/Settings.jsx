@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { UserContext } from "../context/UsersContext";
 import { ThemeContext } from "../context/Theme";
-import "../style/settings.css";
+import "../styles/settings.css";
 
 export default function Settings() {
   const { themeMode, setTheme } = useContext(ThemeContext);
@@ -49,7 +49,7 @@ export default function Settings() {
         }
       >
         <h5>Profile information</h5>
-        <p className={themeMode == "light" ? "" : "dark"}>
+        <p className={themeMode == "light" ? "light" : "dark"}>
           Hi, I'm {currentUser && currentUserInfo.name} ...
         </p>
         <div className="label">

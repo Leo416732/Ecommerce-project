@@ -82,15 +82,7 @@
   width: 150px;
   margin-top: 20px;
 }
-.buyDark {
-  padding: 10px 20px;
-  background-color: #ccc;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  width: 150px;
-  margin-top: 20px;
-}
+
 .buy:hover {
   background-color: #cf9218;
 }
