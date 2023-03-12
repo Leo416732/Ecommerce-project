@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { BasketContext } from "../../context/BasketsContext";
 import Next from "../../icons/Next";
+import { banks } from "../../util/bank";
 
 export default function Checkout() {
   const {
@@ -33,13 +34,12 @@ export default function Checkout() {
               <label className="label" htmlFor="">
                 Card type
               </label>
-              <select className="select" name="options" id="">
-                <option value="khan bank">Khan bank</option>
-                <option value="state bank">State bank</option>
-                <option value="has bank">Has bank</option>
-                <option value="tdb bank">TDB bank</option>
-                <option value="golomt bank">Golomt bank</option>
-                <option value="most money">Most Money</option>
+              <select className="select" name="options">
+                {banks.map((bank, i) => (
+                  <option key={i} value={bank.name}>
+                    {bank.name}
+                  </option>
+                ))}
               </select>
             </div>
             <div>

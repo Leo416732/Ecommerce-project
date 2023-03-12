@@ -50,7 +50,7 @@ export default function Login() {
           <div>
             <button
               type="button btn"
-              className="b"
+              className="registerBtn"
               data-bs-target="#exampleModal"
               data-bs-toggle="modal"
             >
