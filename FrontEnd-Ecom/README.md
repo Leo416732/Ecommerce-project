@@ -1,2 +1,1 @@
-# My E Commerce Figma
-# E-commerce
+# E-commerce project full stack
