@@ -13,7 +13,7 @@ export default function SpecialProduct() {
       <div className="special-product">
         {data &&
           data.map((product, index) => {
-            if (product.stock < 4) {
+            if (product.stock < 5) {
               return <Product product={product} key={index} />;
             }
           })}
