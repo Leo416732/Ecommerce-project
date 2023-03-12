@@ -1,6 +1,6 @@
 import Product from "./Product";
 import "../styles/products.css";
-import { Categories } from "../util/data";
+import { Categories } from "../util/category";
 import { useState, useContext } from "react";
 import { ProductContext } from "../context/ProductsContext";
 import { ThemeContext } from "../context/Theme";
