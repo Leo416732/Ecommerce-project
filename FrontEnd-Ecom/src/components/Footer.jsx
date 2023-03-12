@@ -20,13 +20,17 @@ export default function Footer() {
         </div>
         <div className="footer-text container d-flex">
           <div className="footer-icons">
-            <a href="http://www.google.com" className="icon">
+            <a href="http://www.google.com" target="_blank" className="icon">
               {<Google />}
             </a>
-            <a href="http://www.facebook.com" className="icon">
+            <a href="http://www.facebook.com" target="_blank" className="icon">
               {<Facebook />}
             </a>
-            <a href="https://wa.me/2348100000000" className="icon">
+            <a
+              href="https://wa.me/2348100000000"
+              target="_blank"
+              className="icon"
+            >
               {<Whatsapp />}
             </a>
           </div>
