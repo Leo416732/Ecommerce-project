@@ -1,0 +1,35 @@
+.sidemenu {
+  height: 95vh;
+  width: 200px;
+  padding: 10px;
+}
+.dashboard-button-image {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+}
+.dashboard-button p {
+  color: black;
+  padding-left: 10px;
+}
+.dashboard-button {
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+}
+.Active {
+  background-color: #a7f65c;
+  width: 150px;
+  border: none;
+  height: 35px;
+  margin-top: 10px;
+  text-align: left;
+}
+.inactive {
+  width: 150px;
+  background-color: #fcfcfc;
+  border: none;
+  height: 35px;
+  margin-top: 10px;
+  text-align: left;
+}

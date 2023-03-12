@@ -1,0 +1,50 @@
+.offcanvas {
+  width: 70% !important;
+}
+.offcanvas-close-button {
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+.offcanvas-body {
+  padding: 30px 70px;
+}
+.offcanvas-product-image {
+  height: 100px;
+}
+.offcanvas-product-image label {
+  width: 100%;
+  display: block;
+}
+.offcanvas-product-image input {
+  width: 80%;
+}
+.offcanvas-product-name {
+  width: 50%;
+}
+.offcanvas-product-name button {
+  border: none;
+  background-color: #fff;
+}
+label {
+  width: 100%;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+}
+.offcanvas-product-select {
+  height: 30px;
+  width: 200px;
+}
+.offcanvas-product-form {
+  width: 50%;
+  margin: 20px 0;
+}
+.h5 {
+  margin-top: 40px;
+  font-size: 18px;
+  color: rgb(119, 119, 119);
+}
+.two-option {
+  display: flex;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}

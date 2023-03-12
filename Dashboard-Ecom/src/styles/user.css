@@ -1,0 +1,31 @@
+.user p {
+    padding: 10px;
+    display: flex;
+}
+.user{
+    border: 0.1px solid black;
+    background-color: #fff;
+}
+.user{
+    display: flex;
+}
+.user .id{
+    width: 140px;
+}
+.user .name{
+    width: 150px;
+}
+.user .email{
+    width: 300px;
+}
+.user .phone{
+    width: 150px;
+}
+.user-title{
+    padding:  10px 6px;
+    background-color: #ccc;
+    border-radius: 10px 10px 0 0;
+}
+.user .order{
+    width: 100px;
+}

@@ -1,0 +1,78 @@
+.settings {
+  display: block;
+  height: 100%;
+  padding: 40px;
+}
+.settings-form input {
+  width: 340px;
+  color: rgb(101, 94, 94);
+  font-size: 14px;
+  padding: 5px;
+}
+.settings-form button {
+  width: 340px;
+  background-color: #003585;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+.settings-form button:active {
+  background-color: #012863;
+}
+.settings-form {
+  margin: 20px 0;
+}
+.settings-form p {
+  width: 340px;
+  text-align: left;
+  font-size: 14px;
+}
+.label {
+  display: flex;
+  color: #003585;
+}
+.profile-info {
+  border-bottom: 1px solid #ccc;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+h5 {
+  color: #003585;
+}
+.change-pass {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.dashboard {
+  margin-left: 10%;
+}
+.themeBtn {
+  display: flex;
+  margin-top: 10px;
+}
+.change-theme {
+  padding-top: 50px;
+  border-top: 1px solid #ccc;
+}
+
+.light {
+  background-color: #fff;
+  color: #000;
+}
+.dark {
+  background-color: #000;
+  color: rgb(172, 171, 171);
+}
+.lightInput {
+  background-color: #fff;
+  color: #000;
+}
+.darkInput {
+  background-color: rgb(172, 171, 171);
+  color: #fff;
+}
+.saveBtn {
+  margin-top: 10px;
+}

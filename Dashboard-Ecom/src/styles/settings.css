@@ -1,0 +1,35 @@
+.settings{
+    width: 60%;
+    background-color: #fff;
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+    height: 400px;
+    border-radius: 20px;
+    padding: 40px;
+}
+.settings-form input{
+    width: 340px;
+    color: rgb(101, 94, 94);
+    font-size: 14px;
+    padding: 5px;
+}
+.settings-form button{
+    width: 340px;
+    background-color: #003585;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+.settings-form button:active{
+    background-color: #012863;
+}
+.settings-form{
+    margin: 20px 0;
+}
+.settings-form p {
+    width: 340px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 14px;
+}

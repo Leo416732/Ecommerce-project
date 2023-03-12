@@ -1,0 +1,82 @@
+.navbar {
+  padding: 5px;
+  display: flex;
+}
+.navbar-icons {
+  width: 100px;
+}
+.navbar-icon {
+  margin-bottom: 2px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.quistion-mark {
+  width: 35px;
+  background-color: #a7f65c;
+  padding: 5px;
+  border-radius: 20px;
+  margin: auto;
+}
+.modal-quistion {
+  text-align: center;
+}
+.logout-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.logout-buttons button {
+  width: 200px;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+}
+.dismiss-button:hover {
+  background-color: rgb(202, 197, 197);
+}
+.modal-content {
+  padding: 20px;
+}
+.active-button {
+  background-color: #003585;
+}
+.active-button:hover {
+  background-color: #1051b1;
+}
+.active-button:active {
+  background-color: #125ccb;
+}
+.navbar-logout {
+  background-color: #fff;
+  border: none;
+}
+.navbar-search {
+  margin-top: 3px;
+  display: none;
+}
+.navbar-search input {
+  padding: 5px 20px;
+  border-radius: 25px 0 0 25px;
+  border: 0;
+  background-color: aliceblue;
+}
+.navbar-search button {
+  border-radius: 0 25px 25px 0;
+  padding: 5px 10px;
+  background-color: #003585;
+  color: #fff;
+  border: 0;
+  border: 1px solid #fff;
+}
+@media screen and (min-width: 800px) {
+  .navbar-search {
+    display: flex;
+    max-width: 700px;
+  }
+  .navbar-search input {
+    width: 300px;
+  }
+}

@@ -1,0 +1,101 @@
+.carousel-caption {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  top: 5%;
+  padding-top: 1.25rem;
+  padding-bottom: 150px;
+  color: #fff;
+  text-align: center;
+  width: 300px;
+}
+.slider-img {
+  width: 300px;
+  border-radius: 5%;
+}
+.slider-name {
+  font-size: 10px;
+}
+.slideLight {
+  background-color: #003585;
+}
+.slideDark {
+  background-color: #051123;
+}
+.carousel-inner {
+  width: 100%;
+  overflow: hidden;
+  padding: 100px;
+}
+.round {
+  width: 70px;
+  background-color: #a7f65c;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 70px;
+  bottom: 40px;
+  right: -30px;
+  color: #003585;
+  text-align: center;
+}
+.back {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+.carousel-inner h5 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: 0em;
+  width: 300px;
+  margin: 0 auto;
+}
+.btns {
+  margin: 45px 0;
+  display: flex;
+  gap: 10px;
+}
+.shop-btn {
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 144px;
+  height: 51px;
+  background: #fff;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #003585;
+  border: none;
+  transition: 0.3s;
+}
+.view-btn {
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 144px;
+  height: 51px;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #003585;
+  border: 1px solid #a7f65c;
+  color: #a7f65c;
+  transition: 0.3s;
+}
+.view-btn:hover {
+  background-color: #114696;
+}
+.shop-btn:hover {
+  background-color: rgb(222, 214, 214);
+}
+.carousel {
+  padding: 0 5%;
+}
+
+@media screen and (max-width: 1000px) {
+  .carousel {
+    display: none;
+  }
+}

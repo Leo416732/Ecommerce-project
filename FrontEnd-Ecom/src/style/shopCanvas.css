@@ -1,0 +1,109 @@
+.shop-canvas-prod {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 5px;
+  background-color: #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.shop-canvas-prod img {
+  width: 50px;
+}
+.shop-offcanvas {
+  width: 40% !important;
+}
+@media screen and (max-width: 800px) {
+  .shop-offcanvas {
+    width: 65% !important;
+  }
+}
+
+.shop-canvas-prod .descr {
+  padding-left: 10px;
+  width: 80%;
+  height: 50px;
+}
+.shop-canvas-prod .descr .stock {
+  color: rgb(86, 85, 85);
+  padding-left: 5px;
+}
+.shop-canvas-prod .descr .stock p {
+  color: rgb(86, 85, 85);
+}
+.shop-canvas-prod .delete-button {
+  border: none;
+  background-color: #fff;
+  float: right;
+  width: 10%;
+}
+.canvas-title {
+  display: flex;
+  color: #003585;
+}
+.canvas-title h5 {
+  padding-top: 4px;
+}
+.desc-price {
+  color: #003585;
+  font-weight: 600;
+  padding-left: 5px;
+}
+.checkout {
+  width: 100%;
+  margin-top: 10px;
+}
+.offcanvas-body {
+  min-height: 50vh;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.checkout-button {
+  width: 100%;
+  margin-top: 5px;
+  background-color: #003585;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-button p {
+  color: #fff;
+}
+.checkout-button:hover {
+  background-color: #0a316c;
+}
+.checkout-button:active {
+  background-color: #10274a;
+}
+.total-price {
+  display: flex;
+  width: 95%;
+
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.total-price .text {
+  color: #003585;
+  width: 90%;
+  margin-left: 80%;
+}
+.stocks-many {
+  padding-left: 1.5px;
+  padding-top: 2px;
+  font-size: 11px;
+}
+.bank-image {
+  width: 20px;
+  height: 0px;
+}
+
+.modal-body .label {
+  width: 100px;
+}
+.modal-body .select {
+  width: 40%;
+}

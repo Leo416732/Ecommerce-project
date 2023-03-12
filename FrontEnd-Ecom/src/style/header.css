@@ -1,0 +1,105 @@
+.headerDark {
+  background-color: #051123;
+  padding: 5px;
+}
+.headerLight {
+  background-color: #003585;
+  padding: 5px;
+}
+.header-navbar {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px;
+}
+.header-logo {
+  width: 200px;
+  cursor: pointer;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+}
+.shopbtn {
+  position: relative;
+  border: none;
+}
+.frame {
+  width: 40px;
+  height: 25px;
+}
+.frame-round {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  padding-right: 1px;
+  padding-top: 1px;
+  position: absolute;
+  top: 2px;
+  right: -8px;
+  color: black;
+  font-size: 13px;
+}
+.frameLight {
+  background-color: #fff;
+}
+.frameDark {
+  background-color: rgb(172, 171, 171);
+}
+.header-navbar-icons {
+  display: flex;
+  width: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.newicons {
+  width: 200px;
+  align-items: center;
+  justify-content: space-between;
+}
+p {
+  margin: 0;
+}
+.header-navbar-search {
+  margin-top: 3px;
+  display: none;
+}
+.header-navbar-search input {
+  padding: 5px 20px;
+  border-radius: 25px 0 0 25px;
+  border: 0;
+}
+.header-navbar-search button {
+  border-radius: 0 25px 25px 0;
+  padding: 5px 10px;
+  color: #fff;
+  border: 0;
+  border: 1px solid #fff;
+}
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+@media screen and (min-width: 900px) {
+  .header-navbar-search {
+    display: flex;
+    width: 40%;
+  }
+  .header-navbar-search input {
+    width: 100%;
+  }
+}
+.profile-button {
+  border: none;
+}
+.dropdown-title {
+  border-bottom: 1px solid #ccc;
+  padding-left: 15px;
+  color: #003585;
+  font-size: 17px;
+}
+.profile-name {
+  padding-bottom: 3px;
+  padding-right: 2px;
+}

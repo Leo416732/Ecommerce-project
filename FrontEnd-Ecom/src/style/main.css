@@ -1,0 +1,20 @@
+.main {
+  display: block;
+  min-height: 60vh;
+}
+.main-image img {
+  width: 100%;
+}
+.brand {
+  width: 180px;
+  margin-bottom: 30px;
+}
+.brands {
+  justify-content: space-between;
+  margin: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form {
+  width: 200px;
+}

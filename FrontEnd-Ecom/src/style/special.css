@@ -1,0 +1,11 @@
+p {
+  color: #000;
+}
+.special-product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.special {
+  margin: 80px 0;
+}
