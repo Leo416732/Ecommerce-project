@@ -4,32 +4,45 @@ import { Categories } from "../util/category";
 import { useState, useContext } from "react";
 import { ProductContext } from "../context/ProductsContext";
 import { ThemeContext } from "../context/Theme";
+import { useEffect } from "react";
 
 export default function Products() {
   const { data } = useContext(ProductContext);
-  const [products, setProducts] = useState(data);
-  const [activeBtn, setActiveBtn] = useState(
-    ""
-    // localStorage.getItem("currentBtn") && localStorage.getItem("currentBtn")
+  const { themeMode } = useContext(ThemeContext);
+  let currentBtn = localStorage.getItem("currentBtn");
+  const prod =
+    data &&
+    data.filter((name) => name.category.includes(currentBtn.toLowerCase()));
+  const [products, setProducts] = useState(
+    currentBtn && currentBtn == "all" ? data && data : prod && prod
   );
+  const [activeBtn, setActiveBtn] = useState(currentBtn && currentBtn);
 
-  function buttonHandler(category) {
+  useEffect(() => {
+    if (currentBtn) {
+      if (currentBtn == "all") {
+        setProducts(data);
+      } else {
+        const prod =
+          data &&
+          data.filter((name) =>
+            name.category.includes(currentBtn.toLowerCase())
+          );
+        setProducts(prod);
+      }
+    }
+  }, [currentBtn || activeBtn == currentBtn]);
+
+  function filterProdHandle(category) {
     if (category.name === "All") {
       setProducts(data);
-      setActiveBtn(category.val);
     } else {
-      const prod =
-        data &&
-        data.filter(
-          (name) => name.category.includes(category.name.toLowerCase()),
-          setActiveBtn(category.val)
-        );
       setProducts(prod);
     }
-    // localStorage.setItem("currentBtn", category.val);
+    setActiveBtn(category.val);
+    localStorage.setItem("currentBtn", category.val);
   }
 
-  const { themeMode } = useContext(ThemeContext);
   return (
     <div className={themeMode == "light" ? "light" : "dark"}>
       <div className="nav container">
@@ -39,7 +52,7 @@ export default function Products() {
             <div className="buttons" key={index}>
               <button
                 className={activeBtn === category.val ? "Active" : "inactive"}
-                onClick={() => buttonHandler(category)}
+                onClick={() => filterProdHandle(category)}
               >
                 {category.name}
               </button>

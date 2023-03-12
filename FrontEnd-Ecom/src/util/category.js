@@ -6,19 +6,18 @@ export const Categories = [
 
   {
     name: "Computers & Tablets",
-    val: "comTab",
+    val: "Computers & Tablets",
   },
   {
     name: "Appliances",
-    val: "appl",
+    val: "appliances",
   },
   {
     name: "Gaming Console",
-    val: "gaming",
+    val: "gaming Console",
   },
   {
     name: "Telescope",
-    val: "tels",
+    val: "telescope",
   },
 ];
-
