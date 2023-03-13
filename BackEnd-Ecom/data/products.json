@@ -1,1 +1,386 @@
-[{"image":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6412/6412355_sd.jpg;maxHeight=400;maxWidth=600","name":"Air fryer","price":"122","stock":98,"sale":"10","category":"computers & tablets","spec":[{"capacity":"0.8 cubic feet"},{"color":"Brushed Stainless Steel"},{"a":"a"}],"description":"","id":"858aaaac-e162-4a60-9413-36a54dd102e7"},{"description":"Redmi Pad All in one, pad for fun 90Hz buttery smooth display High-performance MediaTek Helio G99 Long-lasting 8000mAh battery Flagship-level unibody design","spec":[{"display":10.61},{"Resolution":"1200 x 2000"},{"Refresh_rate":"90Hz"},{"Brightness":"400nits "}],"name":"Redmi Pad","id":"a123","image":"https://i02.appmifile.com/84_operator_sg/13/09/2022/972447360327e0954a43fb47c2b84e68.png?f=webp","price":439,"stock":43,"sale":20,"category":"computers & tablets"},{"description":"As we said a moment ago, our favorite laptop features a 13.3″ inch touchscreen. Xiaomi has gone all out, as it is not only of high definition screen of 360° rotation, but it is also Super Retina OLED with a resolution of 2880 x 1800. It has a brightness of up to 600 nits and a contrast ratio of 1000000:1, with a refresh rate of 90Hz, Adjustable to 60Hz if desired via the Fn + S keyboard combination. The above resolution translates to 255 PPI with a display ratio of 16:10. Compatible with DC attenuation * TÜV Rheinland hardware low blue light certification *, Eye Care Display certification, Dolby Vision certification, VESA DisplayHDR 500 High Standard certification.","spec":[{"MemoryCapacity":"Main memory allocated memory"},{"DisplaySize":"13.3"},{"DisplayRatio":"16:10"},{"Type":"ConvertibleDimensions (WxHxD) 296.5mm long Width 205.5mm"}],"name":"Xiaomi Mi Book Air 13","id":"b12e4","image":"https://www.xiaomihome.global/wp-content/uploads/2022/11/xiaomi-book-air-13-2022-cover-1.webp","price":1200,"stock":10,"sale":247,"category":"computers & tablets"},{"description":"Philips Hue smart LED bulbs","spec":[{"type":"A19"},{"wattage":"9.5W"},{"output":"800 Lumens"}],"name":"LED bulbs","id":"8bf7f5fc","image":"https://cdn.shopify.com/s/files/1/0300/9400/0221/products/led-bulb-12watts-600x780_5ff97263-73af-44f6-9b93-d10162d3441d_1024x1024.jpg?v=1658973243","price":80,"stock":4,"sale":2,"category":"appliances"},{"description":"Philips HD6975/00 25 Litre Digital Oven Toaster Grill","spec":[{"capacity":"25 Liters"},{"wattage":"1500W"},{"weight":"6380 Grams"},{"finishType":"HD6975 / 00"}],"name":"Philips Oven","id":"8bf7f8d6","image":"https://cdn.staticans.com/image/tr:e-sharpen-01,h-1500,w-1500,cm-pad_resize/data/philips/otg_28072021.jpg","price":7920,"stock":164,"sale":27,"category":"appliances"},{"description":"XP-PEN Artist12 11.6 Inch FHD Drawing Monitor","spec":[{"brand":"XP-PEN"},{"model":"Artist12"},{"screen":" 11.6 Inch"},{"connectivity":"USB/HDMI","accessories":"PN06 Battery-Free Pen"}],"name":"Sketch Pad","id":"9afc4a40","image":"https://m.media-amazon.com/images/I/714Bfsb6scL._SL1500_.jpg","price":215.99,"stock":15,"sale":12,"category":"computers & tablets"},{"description":"Apple 20W USB-C Power Adapter - iPhone Charger with Fast Charging Capability, Type C Wall Charger","spec":[{"Brand":"Apple"},{"Connectivity_Technology":"USB-C"},{"Connector_Type":"USB Type C"},{"Compatible_Devices":"Apple iPhone"}],"name":"Charger","id":"9c7a554c","image":"https://m.media-amazon.com/images/I/41iWogJnZQL._AC_SX679_.jpg","price":1342,"stock":122,"sale":23,"category":"computers & tablets"},{"description":"Beats Solo3 Wireless supports spatial audio for immersive music – delivering a surround sound experience that you can take with you anywhere.*","spec":[{"length":"6.9 in. / 17.7 cm"},{"model":"Beats solo3"},{"connectivity":"Bluetooth/Wireless"}],"name":"Beats Solo3 Headphones","id":"4ab6599a","image":"https://bjs.scene7.com/is/image/bjs/83445?$bjs-Zoom$","price":200,"stock":60,"sale":10,"category":"computers & tablets"},{"description":"Introducing the newest member of the Nintendo Switch family Play at home on the TV or on-the-go with a vibrant 7-inch OLED screen with the Nintendo Switch – OLED Model system. In addition to a new screen with vivid colors and sharp contrast, the Nintendo Switch – OLED Model includes a wide adjustable stand for more comfortable viewing angles, a dock with a wired LAN port for TV mode (LAN cable sold separately), 64GB of internal storage, and enhanced audio in Handheld and Tabletop modes using the system’s speakers. *There may be software where the game experience may differ due to the new capabilities of the system, such as the larger screen size.","spec":[{"storage":"Save games to your system with 64 GB of internal storage"},{"audio":"Enjoy enhanced sound from the system’s onboard speakers when playing in Handheld and Tabletop modes."}],"name":"Nintendo Switch - OLED Model/White Joy-Con","id":"6a411100","image":"https://m.media-amazon.com/images/I/51yJ+OqktYL.jpg","price":54,"stock":7,"sale":5,"category":"gaming console"},{"description":"Fast-heating electric glass carafe kettle for quickly and conveniently boiling water","spec":[{"height":"8.27 inches"},{"audio":"4.92inches"}],"name":"Basics Electric Glass and Steel Kettle","id":"92fadc2a","image":"https://m.media-amazon.com/images/I/61JS5e82ayL._AC_SX679_.jpg","price":24,"stock":17,"sale":15,"category":"appliance"},{"description":"Celestron PowerSeeker 127EQ Telescope - 20mm Erect-Image Eyepiece - 4mm Eyepiece - 3x Barlow Lens - Star Pointer Finder - Equatorial Head - 2x Slow-Motion Cables - Adjustable-Height Tripod - Counterweight Bar - 7.5 lbs Counterweight - Download Code - Original Box","spec":[{"height":"8.46 inches"},{"width":"16.73 inches"}],"name":"​​Celestron - PowerSeeker 127EQ Telescope","id":"39b365d6","image":"https://m.media-amazon.com/images/I/61Squ7U2zRL._AC_SX679_.jpg","price":169,"stock":9,"sale":23,"category":"telescope"},{"description":"2022 Apple 12.9-inch iPad Pro (Wi-Fi, 128GB) - Space Gray (6th Generation)","spec":[{"Brand":"Apple","Model_Name":"IPad","Memory_Storage_Capacity":"128GB","Color":"Space Gray","Screen_Size":"12.9 inches","Display_Resolution":"2732 x 2048 Pixels","Network":"WiFi"}],"name":"Apple IPad Pro 2022 12.9 inches","id":"0ed4e2d2","image":"https://m.media-amazon.com/images/I/81c+9BOQNWL._AC_SX679_.jpg","price":1094,"stock":3,"sale":1,"category":"computers & tablets"},{"description":"SAMSUNG Galaxy Tab A8 10.5” 32GB Android Tablet w/ LCD Screen, Long Lasting Battery, Kids Content, Smart Switch, Expandable Memory, US Version, Dark Gray","spec":[{"Brand":"Samsung","Series":"Galaxy Tab A8","Memory_Storage_Capacity":"32GB","Color":"Dark Gray","Screen_Size":"10.5 inches","Display_Resolution":"1920 x 1200 Pixels","Network":"WiFi"}],"name":"Galaxy Tab A8","id":"0ed4e412","image":"https://m.media-amazon.com/images/I/61b2BrYtVGL._AC_SX679_.jpg","price":189,"stock":22,"sale":0.4,"category":"computers & tablets"},{"description":"SAMSUNG Galaxy Tab S8+ Android Tablet, 12.4” Large AMOLED Screen, 512GB Storage, Wi-Fi 6E, Ultra Wide Camera, S Pen Included, Long Lasting Battery, Graphite","spec":[{"Brand":"Samsung","Series":"Galaxy Tab S8 plus","Memory_Storage_Capacity":"512GB","Color":"Graphite","Screen_Size":"12.4 inches","Display_Resolution":"2800 x 1752 Pixels","Network":"WiFi 6E"}],"name":"Galaxy Tab S8 Plus","id":"0ed4e520","image":"https://m.media-amazon.com/images/I/81d74GHCPEL._AC_SX679_.jpg","price":1099,"stock":3,"sale":0.2,"category":"computers & tablets"},{"description":"Microsoft Surface Pro 9 (2022), 13 2-in-1 Tablet & Laptop, Thin & Lightweight, Intel 12th Gen i7 Fast Processor for Multi-Tasking, 16GB RAM, 256GB Storage with Windows 11, Graphite","spec":[{"Brand":"Microsoft","Series":"Surface Pro","CPU":"Intel Evo i7-2640M","RAM":"16GB","Memory_Storage_Capacity":"256GB","Color":"Graphite","Screen_Size":"13 inches","Graphics_Coprocessor":"Intel Iris Xe Graphics","Network":"WiFi 6E"}],"name":"Surface Pro","id":"0ed4e73c","image":"https://m.media-amazon.com/images/I/51qmNla8aTL._AC_SX679_.jpg","price":1399.99,"stock":5,"sale":0.1,"category":"computers & tablets"},{"description":"Microsoft Surface Pro 9 (2022), 13 2-in-1 Tablet & Laptop, Thin & Lightweight, Intel 12th Gen i7 Fast Processor for Multi-Tasking, 16GB RAM, 256GB Storage with Windows 11, Forest","spec":[{"Brand":"Microsoft","Series":"Surface Pro","CPU":"Intel Evo i7-2640M","RAM":"16GB","Memory_Storage_Capacity":"256GB","Color":"Forest","Screen_Size":"13 inches","Graphics_Coprocessor":"Intel Iris Xe Graphics","Network":"WiFi 6E"}],"name":"Surface Pro","id":"0ed4e836","image":"https://m.media-amazon.com/images/I/51D3B+8L7DL._AC_SX679_.jpg","price":1399.99,"stock":4,"sale":0.1,"category":"computers & tablets"},{"description":"The earliest existing record of a telescope was a 1608 patent submitted to the government in the Netherlands by Middelburg spectacle maker Hans Lipperhey for a refracting telescope.[","spec":[{"height":"38 7/8 inches"},{"width":"27 3/4 inches"}],"name":"Telescope","id":"7301e3ec","image":"https://m.media-amazon.com/images/I/51vfoiVL2LL._AC_UY436_FMwebp_QL65_.jpg","price":94.99,"stock":25,"sale":10,"category":"telescope"},{"description":"A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically.","spec":[{"Weight":"3.3 Pounds"},{"Lens_Coating":"Fully Coated"},{"Lens_Diameter":"70 Millimeters"}],"name":"Portable Refractor Telescope","id":"7301e694","image":"https://m.media-amazon.com/images/I/41jzRLfDnAL._AC._SR360,460.jpg","price":949.99,"stock":10,"sale":10,"category":"computers & tablets"},{"description":"A tablet computer, commonly shortened to tablet, is a mobile device, typically with a mobile operating system and touchscreen display processing circuitry, and a rechargeable battery in a single, thin and flat package. ","spec":[{"capacity":"0.8 cubic feet"},{"color":"Brushed Stainless Steel"}],"name":"I Pad","id":"7301e7de","image":"https://m.media-amazon.com/images/I/61uA2UVnYWL._AC._SR360,460.jpg","price":394.99,"stock":40,"sale":50,"category":"computers & tablets"},{"description":"A video game console is an electronic device that outputs a video signal or image to display a video game that can be played with a game controller.","spec":[{"DisplaySize":"6.8 inch"},{"CPU":"Medea Teck Helio G 95.8 core"},{"RAM":"11.6GB"}],"name":"I Pad","id":"7301e90a","image":"https://m.media-amazon.com/images/I/61EN9UQLg2L._AC_UY436_FMwebp_QL65_.jpg","price":389.99,"stock":20,"sale":9,"category":"gaming console"},{"description":"FOOD STEAMER: With 7.4 quarts of cooking capacity & 2 separate steaming containers, you can cook a full meal with sides with one simple turn of a switch.","spec":[{"capacity":"5 Liters"},{"wattage":"1500W"}],"name":"Food Steamer","id":"7301ea4a","image":"https://m.media-amazon.com/images/I/81s-z8ThKlL._AC_UL640_FMwebp_QL65_.jpg","price":89.99,"stock":5,"sale":5,"category":"appliances"},{"description":"Astonishing performance. Incredibly advanced displays. Superfast wireless connectivity. Next-level Apple Pencil capabilities. Powerful new features in iPadOS 16. The ultimate iPad experience.","spec":[{"CPU":"8-core"},{"GPU":"10-core"}],"name":"iPad Pro","id":"88b45bfa","image":"https://www.apple.com/v/ipad-pro/al/images/overview/chip/performance_hero__cxya4f2p5euu_large_2x.jpg","price":799,"stock":23,"sale":10,"category":"computers & tablets"},{"image":"https://www.apple.com/v/ipad-pro/al/images/overview/keyboard-pencil/accessories_1__f688jyg47vm2_large_2x.png","name":"iPad Airr","price":"599","stock":"4","sale":"0","category":"computers & tablets"},{"description":"All the essentials in the most affordable iPad.","spec":[{"gen":"9th"},{"inc":"10.2"}],"name":"iPad","id":"88b460fa","image":"https://fdn.gsmarena.com/imgroot/news/20/09/new-ipads-announced/-1200/gsmarena_008.jpg","price":329,"stock":4,"sale":5,"category":"computers & tablets"},{"image":"https://p.globalsources.com/IMAGES/PDT/B1193843786/game-machine.jpg","name":"MP5 Handheld Game Console","price":"19","stock":"2","sale":"5","category":"gaming console","spec":[{"Model Number":"ABS-735"},{"Brand Name":"Good Seller"},{"origin":"China"},{"Small Orders":"Accepted"}],"description":"4.3-Inch Screen 8GB Multi-Language ","id":"7439d8f9-53b9-4720-975c-cc646a291442"}]
+[
+  {
+    "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6412/6412355_sd.jpg;maxHeight=400;maxWidth=600",
+    "name": "Air fryer",
+    "price": "122",
+    "stock": 98,
+    "sale": "10",
+    "category": "computers & tablets",
+    "spec": [
+      { "capacity": "0.8 cubic feet" },
+      { "color": "Brushed Stainless Steel" },
+      { "a": "a" }
+    ],
+    "description": "",
+    "id": "858aaaac-e162-4a60-9413-36a54dd102e7"
+  },
+  {
+    "description": "Redmi Pad All in one, pad for fun 90Hz buttery smooth display High-performance MediaTek Helio G99 Long-lasting 8000mAh battery Flagship-level unibody design",
+    "spec": [
+      { "display": 10.61 },
+      { "Resolution": "1200 x 2000" },
+      { "Refresh_rate": "90Hz" },
+      { "Brightness": "400nits " }
+    ],
+    "name": "Redmi Pad",
+    "id": "a123",
+    "image": "https://i02.appmifile.com/84_operator_sg/13/09/2022/972447360327e0954a43fb47c2b84e68.png?f=webp",
+    "price": 439,
+    "stock": 43,
+    "sale": 20,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "As we said a moment ago, our favorite laptop features a 13.3″ inch touchscreen. Xiaomi has gone all out, as it is not only of high definition screen of 360° rotation, but it is also Super Retina OLED with a resolution of 2880 x 1800. It has a brightness of up to 600 nits and a contrast ratio of 1000000:1, with a refresh rate of 90Hz, Adjustable to 60Hz if desired via the Fn + S keyboard combination. The above resolution translates to 255 PPI with a display ratio of 16:10. Compatible with DC attenuation * TÜV Rheinland hardware low blue light certification *, Eye Care Display certification, Dolby Vision certification, VESA DisplayHDR 500 High Standard certification.",
+    "spec": [
+      { "MemoryCapacity": "Main memory allocated memory" },
+      { "DisplaySize": "13.3" },
+      { "DisplayRatio": "16:10" },
+      { "Type": "ConvertibleDimensions (WxHxD) 296.5mm long Width 205.5mm" }
+    ],
+    "name": "Xiaomi Mi Book Air 13",
+    "id": "b12e4",
+    "image": "https://www.xiaomihome.global/wp-content/uploads/2022/11/xiaomi-book-air-13-2022-cover-1.webp",
+    "price": 1200,
+    "stock": 10,
+    "sale": 247,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "Philips Hue smart LED bulbs",
+    "spec": [
+      { "type": "A19" },
+      { "wattage": "9.5W" },
+      { "output": "800 Lumens" }
+    ],
+    "name": "LED bulbs",
+    "id": "8bf7f5fc",
+    "image": "https://cdn.shopify.com/s/files/1/0300/9400/0221/products/led-bulb-12watts-600x780_5ff97263-73af-44f6-9b93-d10162d3441d_1024x1024.jpg?v=1658973243",
+    "price": 80,
+    "stock": 4,
+    "sale": 2,
+    "category": "appliances"
+  },
+  {
+    "description": "Philips HD6975/00 25 Litre Digital Oven Toaster Grill",
+    "spec": [
+      { "capacity": "25 Liters" },
+      { "wattage": "1500W" },
+      { "weight": "6380 Grams" },
+      { "finishType": "HD6975 / 00" }
+    ],
+    "name": "Philips Oven",
+    "id": "8bf7f8d6",
+    "image": "https://cdn.staticans.com/image/tr:e-sharpen-01,h-1500,w-1500,cm-pad_resize/data/philips/otg_28072021.jpg",
+    "price": 7920,
+    "stock": 164,
+    "sale": 27,
+    "category": "appliances"
+  },
+  {
+    "description": "XP-PEN Artist12 11.6 Inch FHD Drawing Monitor",
+    "spec": [
+      { "brand": "XP-PEN" },
+      { "model": "Artist12" },
+      { "screen": " 11.6 Inch" },
+      { "connectivity": "USB/HDMI", "accessories": "PN06 Battery-Free Pen" }
+    ],
+    "name": "Sketch Pad",
+    "id": "9afc4a40",
+    "image": "https://m.media-amazon.com/images/I/714Bfsb6scL._SL1500_.jpg",
+    "price": 215.99,
+    "stock": 15,
+    "sale": 12,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "Apple 20W USB-C Power Adapter - iPhone Charger with Fast Charging Capability, Type C Wall Charger",
+    "spec": [
+      { "Brand": "Apple" },
+      { "Connectivity_Technology": "USB-C" },
+      { "Connector_Type": "USB Type C" },
+      { "Compatible_Devices": "Apple iPhone" }
+    ],
+    "name": "Charger",
+    "id": "9c7a554c",
+    "image": "https://m.media-amazon.com/images/I/41iWogJnZQL._AC_SX679_.jpg",
+    "price": 1342,
+    "stock": 122,
+    "sale": 23,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "Beats Solo3 Wireless supports spatial audio for immersive music – delivering a surround sound experience that you can take with you anywhere.*",
+    "spec": [
+      { "length": "6.9 in. / 17.7 cm" },
+      { "model": "Beats solo3" },
+      { "connectivity": "Bluetooth/Wireless" }
+    ],
+    "name": "Beats Solo3 Headphones",
+    "id": "4ab6599a",
+    "image": "https://bjs.scene7.com/is/image/bjs/83445?$bjs-Zoom$",
+    "price": 200,
+    "stock": 60,
+    "sale": 10,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "Introducing the newest member of the Nintendo Switch family Play at home on the TV or on-the-go with a vibrant 7-inch OLED screen with the Nintendo Switch – OLED Model system. In addition to a new screen with vivid colors and sharp contrast, the Nintendo Switch – OLED Model includes a wide adjustable stand for more comfortable viewing angles, a dock with a wired LAN port for TV mode (LAN cable sold separately), 64GB of internal storage, and enhanced audio in Handheld and Tabletop modes using the system’s speakers. *There may be software where the game experience may differ due to the new capabilities of the system, such as the larger screen size.",
+    "spec": [
+      { "storage": "Save games to your system with 64 GB of internal storage" },
+      {
+        "audio": "Enjoy enhanced sound from the system’s onboard speakers when playing in Handheld and Tabletop modes."
+      }
+    ],
+    "name": "Nintendo Switch - OLED Model/White Joy-Con",
+    "id": "6a411100",
+    "image": "https://m.media-amazon.com/images/I/51yJ+OqktYL.jpg",
+    "price": 54,
+    "stock": 7,
+    "sale": 5,
+    "category": "gaming console"
+  },
+  {
+    "description": "Fast-heating electric glass carafe kettle for quickly and conveniently boiling water",
+    "spec": [{ "height": "8.27 inches" }, { "audio": "4.92inches" }],
+    "name": "Basics Electric Glass and Steel Kettle",
+    "id": "92fadc2a",
+    "image": "https://m.media-amazon.com/images/I/61JS5e82ayL._AC_SX679_.jpg",
+    "price": 24,
+    "stock": 17,
+    "sale": 15,
+    "category": "appliance"
+  },
+  {
+    "description": "Celestron PowerSeeker 127EQ Telescope - 20mm Erect-Image Eyepiece - 4mm Eyepiece - 3x Barlow Lens - Star Pointer Finder - Equatorial Head - 2x Slow-Motion Cables - Adjustable-Height Tripod - Counterweight Bar - 7.5 lbs Counterweight - Download Code - Original Box",
+    "spec": [{ "height": "8.46 inches" }, { "width": "16.73 inches" }],
+    "name": "​​Celestron - PowerSeeker 127EQ Telescope",
+    "id": "39b365d6",
+    "image": "https://m.media-amazon.com/images/I/61Squ7U2zRL._AC_SX679_.jpg",
+    "price": 169,
+    "stock": 9,
+    "sale": 23,
+    "category": "telescope"
+  },
+  {
+    "description": "2022 Apple 12.9-inch iPad Pro (Wi-Fi, 128GB) - Space Gray (6th Generation)",
+    "spec": [
+      {
+        "Brand": "Apple",
+        "Model_Name": "IPad",
+        "Memory_Storage_Capacity": "128GB",
+        "Color": "Space Gray",
+        "Screen_Size": "12.9 inches",
+        "Display_Resolution": "2732 x 2048 Pixels",
+        "Network": "WiFi"
+      }
+    ],
+    "name": "Apple IPad Pro 2022 12.9 inches",
+    "id": "0ed4e2d2",
+    "image": "https://m.media-amazon.com/images/I/81c+9BOQNWL._AC_SX679_.jpg",
+    "price": 1094,
+    "stock": 3,
+    "sale": 1,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "SAMSUNG Galaxy Tab A8 10.5” 32GB Android Tablet w/ LCD Screen, Long Lasting Battery, Kids Content, Smart Switch, Expandable Memory, US Version, Dark Gray",
+    "spec": [
+      {
+        "Brand": "Samsung",
+        "Series": "Galaxy Tab A8",
+        "Memory_Storage_Capacity": "32GB",
+        "Color": "Dark Gray",
+        "Screen_Size": "10.5 inches",
+        "Display_Resolution": "1920 x 1200 Pixels",
+        "Network": "WiFi"
+      }
+    ],
+    "name": "Galaxy Tab A8",
+    "id": "0ed4e412",
+    "image": "https://m.media-amazon.com/images/I/61b2BrYtVGL._AC_SX679_.jpg",
+    "price": 189,
+    "stock": 22,
+    "sale": 0.4,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "SAMSUNG Galaxy Tab S8+ Android Tablet, 12.4” Large AMOLED Screen, 512GB Storage, Wi-Fi 6E, Ultra Wide Camera, S Pen Included, Long Lasting Battery, Graphite",
+    "spec": [
+      {
+        "Brand": "Samsung",
+        "Series": "Galaxy Tab S8 plus",
+        "Memory_Storage_Capacity": "512GB",
+        "Color": "Graphite",
+        "Screen_Size": "12.4 inches",
+        "Display_Resolution": "2800 x 1752 Pixels",
+        "Network": "WiFi 6E"
+      }
+    ],
+    "name": "Galaxy Tab S8 Plus",
+    "id": "0ed4e520",
+    "image": "https://m.media-amazon.com/images/I/81d74GHCPEL._AC_SX679_.jpg",
+    "price": 1099,
+    "stock": 3,
+    "sale": 0.2,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "Microsoft Surface Pro 9 (2022), 13 2-in-1 Tablet & Laptop, Thin & Lightweight, Intel 12th Gen i7 Fast Processor for Multi-Tasking, 16GB RAM, 256GB Storage with Windows 11, Graphite",
+    "spec": [
+      {
+        "Brand": "Microsoft",
+        "Series": "Surface Pro",
+        "CPU": "Intel Evo i7-2640M",
+        "RAM": "16GB",
+        "Memory_Storage_Capacity": "256GB",
+        "Color": "Graphite",
+        "Screen_Size": "13 inches",
+        "Graphics_Coprocessor": "Intel Iris Xe Graphics",
+        "Network": "WiFi 6E"
+      }
+    ],
+    "name": "Surface Pro",
+    "id": "0ed4e73c",
+    "image": "https://m.media-amazon.com/images/I/51qmNla8aTL._AC_SX679_.jpg",
+    "price": 1399.99,
+    "stock": 5,
+    "sale": 0.1,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "Microsoft Surface Pro 9 (2022), 13 2-in-1 Tablet & Laptop, Thin & Lightweight, Intel 12th Gen i7 Fast Processor for Multi-Tasking, 16GB RAM, 256GB Storage with Windows 11, Forest",
+    "spec": [
+      {
+        "Brand": "Microsoft",
+        "Series": "Surface Pro",
+        "CPU": "Intel Evo i7-2640M",
+        "RAM": "16GB",
+        "Memory_Storage_Capacity": "256GB",
+        "Color": "Forest",
+        "Screen_Size": "13 inches",
+        "Graphics_Coprocessor": "Intel Iris Xe Graphics",
+        "Network": "WiFi 6E"
+      }
+    ],
+    "name": "Surface Pro",
+    "id": "0ed4e836",
+    "image": "https://m.media-amazon.com/images/I/51D3B+8L7DL._AC_SX679_.jpg",
+    "price": 1399.99,
+    "stock": 4,
+    "sale": 0.1,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "The earliest existing record of a telescope was a 1608 patent submitted to the government in the Netherlands by Middelburg spectacle maker Hans Lipperhey for a refracting telescope.[",
+    "spec": [{ "height": "38 7/8 inches" }, { "width": "27 3/4 inches" }],
+    "name": "Telescope",
+    "id": "7301e3ec",
+    "image": "https://m.media-amazon.com/images/I/51vfoiVL2LL._AC_UY436_FMwebp_QL65_.jpg",
+    "price": 94.99,
+    "stock": 25,
+    "sale": 10,
+    "category": "telescope"
+  },
+  {
+    "description": "A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically.",
+    "spec": [
+      { "Weight": "3.3 Pounds" },
+      { "Lens_Coating": "Fully Coated" },
+      { "Lens_Diameter": "70 Millimeters" }
+    ],
+    "name": "Portable Refractor Telescope",
+    "id": "7301e694",
+    "image": "https://m.media-amazon.com/images/I/41jzRLfDnAL._AC._SR360,460.jpg",
+    "price": 949.99,
+    "stock": 10,
+    "sale": 10,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "A tablet computer, commonly shortened to tablet, is a mobile device, typically with a mobile operating system and touchscreen display processing circuitry, and a rechargeable battery in a single, thin and flat package. ",
+    "spec": [
+      { "capacity": "0.8 cubic feet" },
+      { "color": "Brushed Stainless Steel" }
+    ],
+    "name": "I Pad",
+    "id": "7301e7de",
+    "image": "https://m.media-amazon.com/images/I/61uA2UVnYWL._AC._SR360,460.jpg",
+    "price": 394.99,
+    "stock": 40,
+    "sale": 50,
+    "category": "computers & tablets"
+  },
+  {
+    "description": "A video game console is an electronic device that outputs a video signal or image to display a video game that can be played with a game controller.",
+    "spec": [
+      { "DisplaySize": "6.8 inch" },
+      { "CPU": "Medea Teck Helio G 95.8 core" },
+      { "RAM": "11.6GB" }
+    ],
+    "name": "I Pad",
+    "id": "7301e90a",
+    "image": "https://m.media-amazon.com/images/I/61EN9UQLg2L._AC_UY436_FMwebp_QL65_.jpg",
+    "price": 389.99,
+    "stock": 20,
+    "sale": 9,
+    "category": "gaming console"
+  },
+  {
+    "description": "FOOD STEAMER: With 7.4 quarts of cooking capacity & 2 separate steaming containers, you can cook a full meal with sides with one simple turn of a switch.",
+    "spec": [{ "capacity": "5 Liters" }, { "wattage": "1500W" }],
+    "name": "Food Steamer",
+    "id": "7301ea4a",
+    "image": "https://m.media-amazon.com/images/I/81s-z8ThKlL._AC_UL640_FMwebp_QL65_.jpg",
+    "price": 89.99,
+    "stock": 5,
+    "sale": 5,
+    "category": "appliances"
+  },
+  {
+    "description": "Astonishing performance. Incredibly advanced displays. Superfast wireless connectivity. Next-level Apple Pencil capabilities. Powerful new features in iPadOS 16. The ultimate iPad experience.",
+    "spec": [{ "CPU": "8-core" }, { "GPU": "10-core" }],
+    "name": "iPad Pro",
+    "id": "88b45bfa",
+    "image": "https://www.apple.com/v/ipad-pro/al/images/overview/chip/performance_hero__cxya4f2p5euu_large_2x.jpg",
+    "price": 799,
+    "stock": 23,
+    "sale": 10,
+    "category": "computers & tablets"
+  },
+  {
+    "image": "https://www.apple.com/v/ipad-pro/al/images/overview/keyboard-pencil/accessories_1__f688jyg47vm2_large_2x.png",
+    "name": "iPad Airr",
+    "price": "599",
+    "stock": "4",
+    "sale": "0",
+    "category": "computers & tablets"
+  },
+  {
+    "description": "All the essentials in the most affordable iPad.",
+    "spec": [{ "gen": "9th" }, { "inc": "10.2" }],
+    "name": "iPad",
+    "id": "88b460fa",
+    "image": "https://fdn.gsmarena.com/imgroot/news/20/09/new-ipads-announced/-1200/gsmarena_008.jpg",
+    "price": 329,
+    "stock": 4,
+    "sale": 5,
+    "category": "computers & tablets"
+  },
+  {
+    "image": "https://p.globalsources.com/IMAGES/PDT/B1193843786/game-machine.jpg",
+    "name": "MP5 Handheld Game Console",
+    "price": "19",
+    "stock": "2",
+    "sale": "5",
+    "category": "gaming console",
+    "spec": [
+      { "Model Number": "ABS-735" },
+      { "Brand Name": "Good Seller" },
+      { "origin": "China" },
+      { "Small Orders": "Accepted" }
+    ],
+    "description": "4.3-Inch Screen 8GB Multi-Language ",
+    "id": "7439d8f9-53b9-4720-975c-cc646a291442"
+  }
+]
