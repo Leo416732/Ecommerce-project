@@ -11,6 +11,8 @@ export default function Handlers({ children }) {
   const [getSpec, setSpec] = useState([]);
   const length = data?.length;
 
+  console.log(data);
+
   const handleClose = () => setShow(false);
   function handleShow(product) {
     setShow(true);
@@ -19,13 +21,15 @@ export default function Handlers({ children }) {
       setSpec(product.spec);
     }
   }
-  function deleteHandler(id) {
-    axios.delete(`http://localhost:2020/products/${id}`);
+  function deleteHandler(name) {
+    axios
+      .delete(`http://localhost:2020/productDel?name=${name}`)
+      .then((res) => res.statusText === "OK" && alert("delete"));
     setIsAction(isAction + 1);
   }
   useEffect(() => {
     axios
-      .get("http://localhost:2020/products")
+      .get("http://localhost:2020/productsGet")
       .then((products) => setData(products.data));
   }, [isAction]);
   return (

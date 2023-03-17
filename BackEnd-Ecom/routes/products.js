@@ -1,91 +1,48 @@
 import express from "express";
-import fs from "fs";
+import {
+  deleteProduct,
+  getProducts,
+  postProduct,
+  putProduct,
+} from "../services/prod-service.js";
 
 const products_router = express.Router();
 
-products_router.get("/products", (req, res) => {
-  fs.readFile("./data/products.json", (err, data) => {
-    if (err) {
-      res.status(500).send({ message: err });
-    } else {
-      let products = JSON.parse(data);
-      res.status(200).json(products);
-    }
-  });
+//mongoose router
+products_router.get("/productsGet", async (req, res) => {
+  const result = await getProducts();
+  res.status(200).json(result);
 });
 
-products_router.post("/products", (req, res) => {
-  fs.readFile("./data/products.json", (err, data) => {
-    if (err) {
-      res.status(500).send({ message: err });
-    } else {
-      const products = JSON.parse(data);
-      products.push({ ...req.body, id: uuid().slice(0, 8) });
-      fs.writeFile("./data/products.json", JSON.stringify(products), (err) => {
-        if (err) {
-          res.status(500).send({ message: err });
-        } else {
-          res.status(200).send({ message: "success" });
-        }
-      });
-    }
-  });
+products_router.post("/productPost", async (req, res) => {
+  const result = await postProduct(req.body);
+  if (result !== null) {
+    res.status(200).send(result);
+  } else {
+    res.status(400).send("something error");
+  }
 });
 
-products_router.delete("/products/:id", (req, res) => {
-  fs.readFile("./data/products.json", (err, data) => {
-    if (err) {
-      res.status(500).send({ message: err });
-    } else {
-      let products = JSON.parse(data);
-      const filter = products.filter((prd) => prd.id !== req.params.id);
-      products = filter;
-      fs.writeFile("./data/products.json", JSON.stringify(products), (err) => {
-        if (err) {
-          res.status(500).send({ message: err });
-        } else {
-          res.status(200).send({ message: "success" });
-        }
-      });
-    }
-  });
+products_router.delete("/productDel", async (req, res) => {
+  const query = req.query;
+  if (query && query.name) {
+    const result = await deleteProduct(query.name);
+    res.status(200).send(result);
+  } else {
+    res.status(400).send("something wrong");
+  }
 });
-products_router.put("/products/:id", (req, res) => {
-  fs.readFile("./data/products.json", (err, data) => {
-    if (err) {
-      res.status(500).send({ message: err });
-    } else {
-      let products = JSON.parse(data);
-      const findData = products.find((product) => product.id === req.params.id);
-      products[products.indexOf(findData)] = req.body;
-      fs.writeFile("./data/products.json", JSON.stringify(products), (err) => {
-        if (err) {
-          res.status(500).send({ message: err });
-        } else {
-          res.status(200).send({ message: "success" });
-        }
-      });
-    }
-  });
-});
-products_router.put("/product/:id", (req, res) => {
-  fs.readFile("./data/products.json", (err, data) => {
-    if (err) {
-      res.status(500).send({ message: err });
-    } else {
-      let products = JSON.parse(data);
-      const findData = products.find((product) => product.id === req.params.id);
-      products[products.indexOf(findData)].stock =
-        Number(products[products.indexOf(findData)].stock) - req.body.stock;
-      fs.writeFile("./data/products.json", JSON.stringify(products), (err) => {
-        if (err) {
-          res.status(500).send({ message: err });
-        } else {
-          res.status(200).send({ message: "success" });
-        }
-      });
-    }
-  });
+
+products_router.put("/productPut", async (req, res) => {
+  let oldProd = req.query;
+  let newProd = req.body;
+
+  if (oldProd && oldProd.name) {
+    const result = await putProduct(oldProd.name, newProd);
+    res.status(200).json(result);
+  } else {
+    res.status(400).send("something wrong");
+  }
 });
 
 export default products_router;

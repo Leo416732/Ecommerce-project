@@ -1,8 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Inputtt from "./Inputtt";
 import { Offcanvas } from "react-bootstrap";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
 import { ProductsContext } from "../../context/ProductProvider";
 import "../../styles/offcanvas.css";
 import CLose from "../icon/Close";
@@ -21,19 +20,22 @@ export default function ProductCanvas() {
   } = useContext(ProductsContext);
 
   function post(obj) {
-    axios.post("http://localhost:2020/products", obj);
-    console.log(isAction);
+    axios
+      .post("http://localhost:2020/productPost", obj)
+      .then((res) => res.statusText === "OK" && alert("post"));
     setIsAction(isAction + 1);
   }
   function put(obj) {
-    axios.put(`http://localhost:2020/products/${editProduct.id}`, obj);
+    axios
+      .put(`http://localhost:2020/productPut?name=${editProduct.name}`, obj)
+      .then((res) => res.statusText === "OK" && alert("update"));
     setedit(false);
     setIsAction(isAction + 1);
   }
   function productAddHandler(e) {
     e.preventDefault();
+    console.log(e.target.image.value);
     let obj = {
-      image: e.target.image.value,
       name: e.target.name.value,
       price: e.target.price.value,
       stock: e.target.stock.value,
@@ -41,7 +43,6 @@ export default function ProductCanvas() {
       category: e.target.category.value.toLowerCase(),
       spec: getSpec,
       description: e.target.desc.value,
-      id: uuidv4(),
     };
 
     edit ? put(obj) : post(obj);
@@ -66,7 +67,7 @@ export default function ProductCanvas() {
                 <label htmlFor="">Барааны зураг</label>
                 <input
                   className="offcanvas-product-image-input"
-                  type="text"
+                  type="file"
                   placeholder="Image link"
                   name="image"
                   defaultValue={editProduct && editProduct.image}

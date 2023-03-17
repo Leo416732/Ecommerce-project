@@ -4,11 +4,12 @@ export const ProductContext = createContext();
 
 export default function ProductsContext({ children }) {
   const [data, setData] = useState();
+  const [testData, setTestData] = useState();
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     axios
-      .get("http://localhost:2020/products")
+      .get("http://localhost:2020/productsGet")
       .then((products) => setData(products.data));
   }, []);
 
