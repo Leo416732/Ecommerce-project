@@ -108,4 +108,7 @@ users_router.post("/users", (req, res) => {
   });
 });
 
+//mongoose
+users_router.post("/usersPost", (req, res) => {});
+
 export default users_router;
