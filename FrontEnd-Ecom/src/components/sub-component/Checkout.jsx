@@ -7,12 +7,55 @@ import { banks } from "../../util/bank";
 
 export default function Checkout() {
   const {
-    checkOutHandle,
+    setShowModal,
     handleCloseModal,
     handleShowModal,
     showModal,
     totalPrice,
   } = useContext(BasketContext);
+
+  let basketDeatail = [];
+
+  function checkOutHandle(e) {
+    e.preventDefault();
+    if (e.target.address.value === "") {
+      alert("address is undefined");
+    } else if (e.target.phone.value === "") {
+      alert("phone is undefined");
+    } else {
+      setShowModal(false);
+      baskets &&
+        baskets.map((basketProd) => {
+          basketDeatail.push({
+            orderId: basketProd.id,
+            quentity: basketProd.stock,
+          });
+        });
+      axios.post("http://localhost:2020/orders", {
+        address: e.target.address.value,
+        orderDeatail: basketDeatail,
+        totalPrice,
+        cardType: e.target.options.value,
+        phone: e.target.phone.value,
+        allQuentity: stocks,
+        status: false,
+        email: currentUser,
+      });
+    }
+    basketDeatail.forEach((basketProduct) => {
+      axios.put(`http://localhost:2020/product/${basketProduct.orderId}`, {
+        stock: basketProduct.quentity,
+      });
+    });
+
+    //clear basket
+    alert("success");
+    setShowModal(false);
+    handleClose(false);
+    baskets = [];
+    localStorage.removeItem("baskets");
+    location.reload();
+  }
 
   return (
     <>

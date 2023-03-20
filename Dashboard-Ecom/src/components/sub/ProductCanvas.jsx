@@ -19,7 +19,11 @@ export default function ProductCanvas() {
     isAction,
   } = useContext(ProductsContext);
 
-  function post(obj) {
+  function post(obj, e) {
+    let data = new FormData();
+    data.append("file", e.target.image.files[0]);
+    axios.post(`http://localhost:2020/productPostImage?`, data);
+
     axios
       .post("http://localhost:2020/productPost", obj)
       .then((res) => res.statusText === "OK" && alert("post"));
@@ -34,7 +38,7 @@ export default function ProductCanvas() {
   }
   function productAddHandler(e) {
     e.preventDefault();
-    console.log(e.target.image.value);
+
     let obj = {
       name: e.target.name.value,
       price: e.target.price.value,
@@ -45,7 +49,7 @@ export default function ProductCanvas() {
       description: e.target.desc.value,
     };
 
-    edit ? put(obj) : post(obj);
+    edit ? put(obj) : post(obj, e);
   }
 
   return (

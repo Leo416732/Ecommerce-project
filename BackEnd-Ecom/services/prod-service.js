@@ -1,4 +1,4 @@
-import Products from "../model/products-api.js";
+import Products from "../model/products.js";
 import moment from "moment";
 import "../config/mongoose-config.js";
 

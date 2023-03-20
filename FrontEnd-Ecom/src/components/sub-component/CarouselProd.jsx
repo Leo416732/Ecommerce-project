@@ -30,7 +30,7 @@ function CarouselProd() {
                       <button
                         className="shop-btn"
                         onClick={() => {
-                          navigate(`../product/${product.id}`);
+                          navigate(`../product/${product._id}`);
                         }}
                       >
                         Shop now
@@ -38,7 +38,7 @@ function CarouselProd() {
                       <button
                         className="view-btn"
                         onClick={() => {
-                          navigate(`../product/${product.id}`);
+                          navigate(`../product/${product._id}`);
                         }}
                       >
                         view more

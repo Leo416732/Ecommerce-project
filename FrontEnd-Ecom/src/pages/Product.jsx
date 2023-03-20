@@ -11,7 +11,7 @@ export default function Product(prop) {
     <div
       className={themeMode == "light" ? "cardLight card" : "cardDark card"}
       onClick={() => {
-        navigate(`../product/${product.id}`);
+        navigate(`../product/${product._id}`);
       }}
     >
       <img className="card-image" src={product && product.image} alt="" />

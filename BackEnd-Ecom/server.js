@@ -3,6 +3,7 @@ import cors from "cors";
 import products_router from "./routes/products.js";
 import users_router from "./routes/users.js";
 import orders_router from "./routes/orders.js";
+import cloudinary from "./config/cloudinary.js";
 
 const app = express();
 const port = 2020;

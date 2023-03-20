@@ -9,14 +9,12 @@ export default function BasketsContext({ children }) {
   const [stocks, setStocks] = useState();
   const [cardProd, setCardProd] = useState();
   const [show, setShow] = useState(false);
-  const { currentUser } = useContext(ProductContext);
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   let baskets = JSON.parse(localStorage.getItem("baskets"));
   let stockCount = [];
   let totalPrice = 0;
-  let basketDeatail = [];
 
   cardProd &&
     cardProd.map(
@@ -52,60 +50,11 @@ export default function BasketsContext({ children }) {
     }
   }, [count || show]);
 
-  function deleteProductHandle(id) {
-    let deleteProduct =
-      baskets && baskets.filter((delProd) => delProd.id !== id);
-    localStorage.setItem("baskets", JSON.stringify(deleteProduct));
-    location.reload();
-  }
-
-  //checkout server post and stock update
-  function checkOutHandle(e) {
-    e.preventDefault();
-    if (e.target.address.value === "") {
-      alert("address is undefined");
-    } else if (e.target.phone.value === "") {
-      alert("phone is undefined");
-    } else {
-      setShowModal(false);
-      baskets &&
-        baskets.map((basketProd) => {
-          basketDeatail.push({
-            orderId: basketProd.id,
-            quentity: basketProd.stock,
-          });
-        });
-      axios.post("http://localhost:2020/orders", {
-        address: e.target.address.value,
-        orderDeatail: basketDeatail,
-        totalPrice,
-        cardType: e.target.options.value,
-        phone: e.target.phone.value,
-        allQuentity: stocks,
-        status: false,
-        email: currentUser,
-      });
-    }
-    basketDeatail.forEach((basketProduct) => {
-      axios.put(`http://localhost:2020/product/${basketProduct.orderId}`, {
-        stock: basketProduct.quentity,
-      });
-    });
-
-    //clear basket
-    alert("success");
-    setShowModal(false);
-    handleClose(false);
-    baskets = [];
-    localStorage.removeItem("baskets");
-    location.reload();
-  }
   return (
     <BasketContext.Provider
       value={{
-        checkOutHandle,
+        setShowModal,
         cardProd,
-        deleteProductHandle,
         handleClose,
         handleShow,
         stocks,

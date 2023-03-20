@@ -9,16 +9,19 @@ import { useEffect } from "react";
 export default function Products() {
   const { data } = useContext(ProductContext);
   const { themeMode } = useContext(ThemeContext);
+
   let currentBtn = localStorage.getItem("currentBtn");
-  const prod =
+  let prod =
     data &&
     data.filter((name) => name.category.includes(currentBtn.toLowerCase()));
-  const [products, setProducts] = useState(
-    currentBtn && currentBtn == "all" ? data && data : prod && prod
-  );
+  const [products, setProducts] = useState();
+  // currentBtn && currentBtn == "all" ? data : prod
+
+  console.log("products: ", data);
   const [activeBtn, setActiveBtn] = useState(currentBtn && currentBtn);
 
   useEffect(() => {
+    let currentBtn = localStorage.getItem("currentBtn");
     if (currentBtn) {
       if (currentBtn == "all") {
         setProducts(data);
@@ -31,14 +34,17 @@ export default function Products() {
         setProducts(prod);
       }
     }
-  }, [currentBtn || activeBtn == currentBtn]);
+  }, [currentBtn, data, activeBtn == currentBtn]);
 
   function filterProdHandle(category) {
-    if (category.name === "All") {
-      setProducts(data);
-    } else {
-      setProducts(prod);
-    }
+    // if (category.name === "all") {
+    //   setProducts(data);
+    // } else {
+    //   const prod =
+    //     data &&
+    //     data.filter((name) => name.category.includes(currentBtn.toLowerCase()));
+    //   setProducts(prod);
+    // }
     setActiveBtn(category.val);
     localStorage.setItem("currentBtn", category.val);
   }

@@ -12,7 +12,7 @@ export default function ProductCard() {
   const test = useParams();
   const { themeMode } = useContext(ThemeContext);
 
-  let productDeatail = data && data.filter((prod) => prod.id === test.id);
+  let productDeatail = data && data.filter((prod) => prod._id === test.id);
 
   function addCount() {
     if (x < productDeatail[0].stock) {
