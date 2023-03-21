@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { ProductsContext } from "../context/ProductProvider";
 import AdminHeader from "../components/Header";
 import SideMenu from "../components/SideMenu";
-import Product from "../components/sub/Product";
+import Product from "./Product";
 import ProductCanvas from "../components/sub/ProductCanvas";
 
 export default function Search() {

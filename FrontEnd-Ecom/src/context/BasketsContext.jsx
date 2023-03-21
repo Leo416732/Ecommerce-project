@@ -22,6 +22,7 @@ export default function BasketsContext({ children }) {
         (totalPrice =
           baskets && totalPrice + product.price * baskets[index].stock)
     );
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleCloseModal = () => setShowModal(false);
@@ -44,7 +45,7 @@ export default function BasketsContext({ children }) {
       let filter =
         data &&
         data.filter((product) =>
-          baskets.find((findProduct) => findProduct.id === product.id)
+          baskets.find((findProduct) => findProduct._id === product._id)
         );
       setCardProd(filter);
     }

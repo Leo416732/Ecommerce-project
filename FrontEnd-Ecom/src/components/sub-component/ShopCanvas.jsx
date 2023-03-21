@@ -12,12 +12,13 @@ import { ThemeContext } from "../../context/Theme";
 export default function ShopCanvas() {
   const { handleClose, cardProd, handleShow, stocks, show, totalPrice } =
     useContext(BasketContext);
-  let baskets = JSON.parse(localStorage.getItem("baskets"));
+
   const { themeMode } = useContext(ThemeContext);
+  let baskets = JSON.parse(localStorage.getItem("baskets"));
 
   function deleteProductHandle(id) {
     let deleteProduct =
-      baskets && baskets.filter((delProd) => delProd.id !== id);
+      baskets && baskets.filter((delProd) => delProd._id !== id);
     localStorage.setItem("baskets", JSON.stringify(deleteProduct));
     location.reload();
   }
@@ -87,7 +88,7 @@ export default function ShopCanvas() {
                       <button
                         className="delete-button"
                         onClick={() =>
-                          deleteProductHandle(product && product.id)
+                          deleteProductHandle(product && product._id)
                         }
                       >
                         <CLose />

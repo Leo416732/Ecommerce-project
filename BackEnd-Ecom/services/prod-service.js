@@ -11,17 +11,20 @@ export async function getProducts() {
 }
 
 const date = moment().format("llll");
+
 //post product
 export async function postProduct(newProd) {
-  return await Products.create({
+  const prod = await Products.create({
     name: newProd.name,
     price: newProd.price,
     stock: newProd.stock,
+    sale: newProd.sale,
     category: newProd.category,
     description: newProd.description,
     spec: newProd.spec,
     created_date: date,
     update_date: date,
+    image: newProd.image,
   });
 }
 
@@ -31,9 +34,9 @@ export async function deleteProduct(deleteProName) {
 }
 
 //update product
-export async function putProduct(oldProd, newProd) {
+export async function putProduct(_id, newProd) {
   return await Products.updateOne(
-    { name: oldProd },
+    { _id },
     {
       name: newProd.name,
       price: newProd.price,

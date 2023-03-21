@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ProductsContext } from "../../context/ProductProvider";
-import Dots from "../icon/Dots";
+import { ProductsContext } from "../context/ProductProvider";
+import Dots from "../components/icon/Dots";
 
 export default function Product(prop) {
   const { product } = prop;

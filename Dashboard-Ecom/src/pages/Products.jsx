@@ -1,11 +1,11 @@
-import "../../styles/products.css";
+import "../styles/products.css";
 import { Button } from "react-bootstrap";
-import ProductCanvas from "./ProductCanvas";
+import ProductCanvas from "../components/sub/ProductCanvas";
 import Product from "./Product";
-import Pagination from "./Pagination";
+import Pagination from "../components/sub/Pagination";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { ProductsContext } from "../../context/ProductProvider";
+import { ProductsContext } from "../context/ProductProvider";
 
 export default function Products() {
   const { data, handleShow } = useContext(ProductsContext);

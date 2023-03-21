@@ -9,7 +9,7 @@ export default function ProductsContext({ children }) {
   useEffect(() => {
     axios
       .get("http://localhost:2020/productsGet")
-      .then((responsive) => setData(responsive.data));
+      .then((response) => setData(response.data));
   }, []);
 
   return (

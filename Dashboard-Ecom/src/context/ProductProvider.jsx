@@ -11,8 +11,6 @@ export default function Handlers({ children }) {
   const [getSpec, setSpec] = useState([]);
   const length = data?.length;
 
-  console.log(data);
-
   const handleClose = () => setShow(false);
   function handleShow(product) {
     setShow(true);

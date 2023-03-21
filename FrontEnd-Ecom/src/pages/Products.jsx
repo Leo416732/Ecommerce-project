@@ -11,13 +11,7 @@ export default function Products() {
   const { themeMode } = useContext(ThemeContext);
 
   let currentBtn = localStorage.getItem("currentBtn");
-  let prod =
-    data &&
-    data.filter((name) => name.category.includes(currentBtn.toLowerCase()));
   const [products, setProducts] = useState();
-  // currentBtn && currentBtn == "all" ? data : prod
-
-  console.log("products: ", data);
   const [activeBtn, setActiveBtn] = useState(currentBtn && currentBtn);
 
   useEffect(() => {
@@ -37,14 +31,6 @@ export default function Products() {
   }, [currentBtn, data, activeBtn == currentBtn]);
 
   function filterProdHandle(category) {
-    // if (category.name === "all") {
-    //   setProducts(data);
-    // } else {
-    //   const prod =
-    //     data &&
-    //     data.filter((name) => name.category.includes(currentBtn.toLowerCase()));
-    //   setProducts(prod);
-    // }
     setActiveBtn(category.val);
     localStorage.setItem("currentBtn", category.val);
   }

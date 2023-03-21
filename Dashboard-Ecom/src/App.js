@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "./components/sub/Dashboard";
-import Moderator from "./components/sub/Moderator";
-import Orders from "./components/sub/Orders";
-import Settings from "./components/sub/Settings";
-import Users from "./components/sub/Users";
-import Products from "./components/sub/Products";
+import Dashboard from "./components/menu/Dashboard";
+import Moderator from "./components/menu/Moderator";
+import Orders from "./components/menu/Orders";
+import Settings from "./components/menu/Settings";
+import Users from "./components/menu/Users";
+import Products from "./pages/Products";
 import Login from "./pages/Login";
 import Search from "./pages/Search";
 import Main from "./pages/Main";

@@ -38,17 +38,17 @@ export default function ProductCard() {
     if (localStorage.getItem("baskets")) {
       baskets = JSON.parse(localStorage.getItem("baskets"));
       const findData = baskets.find(
-        (product) => product.id === productDeatail[0].id
+        (product) => product._id === productDeatail[0]._id
       );
       if (findData) {
         baskets[baskets.indexOf(findData)].stock =
           baskets[baskets.indexOf(findData)].stock + x;
         baskets = [...baskets];
       } else {
-        baskets = [...baskets, { id: productDeatail[0].id, stock: x }];
+        baskets = [...baskets, { _id: productDeatail[0]._id, stock: x }];
       }
     } else {
-      baskets = [...baskets, { id: productDeatail[0].id, stock: x }];
+      baskets = [...baskets, { _id: productDeatail[0]._id, stock: x }];
     }
     localStorage.setItem("baskets", JSON.stringify(baskets));
   }

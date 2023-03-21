@@ -22,16 +22,13 @@ export default function ProductCanvas() {
   function post(obj, e) {
     let data = new FormData();
     data.append("file", e.target.image.files[0]);
-    axios.post(`http://localhost:2020/productPostImage?`, data);
+    data.append("newProduct", JSON.stringify(obj));
 
-    axios
-      .post("http://localhost:2020/productPost", obj)
-      .then((res) => res.statusText === "OK" && alert("post"));
-    setIsAction(isAction + 1);
+    axios.post(`http://localhost:2020/productPost`, data);
   }
   function put(obj) {
     axios
-      .put(`http://localhost:2020/productPut?name=${editProduct.name}`, obj)
+      .put(`http://localhost:2020/productPut?name=${editProduct._id}`, obj)
       .then((res) => res.statusText === "OK" && alert("update"));
     setedit(false);
     setIsAction(isAction + 1);
@@ -52,6 +49,12 @@ export default function ProductCanvas() {
     edit ? put(obj) : post(obj, e);
   }
 
+  function deleteSpecHandle(name) {
+    let arr = [];
+    getSpec && getSpec.filter((spec, i) => name !== spec && arr.push(spec));
+    setSpec(arr);
+  }
+
   return (
     <div>
       <Offcanvas
@@ -68,13 +71,13 @@ export default function ProductCanvas() {
           <form onSubmit={productAddHandler}>
             <div className="add-product-offcanvas">
               <div className="offcanvas-product-image">
-                <label htmlFor="">Барааны зураг</label>
+                <label>Барааны зураг</label>
+                {/* <img src={editProduct && editProduct.image} /> */}
                 <input
                   className="offcanvas-product-image-input"
-                  type="file"
+                  type={"file"}
                   placeholder="Image link"
                   name="image"
-                  defaultValue={editProduct && editProduct.image}
                 />
               </div>
               <div className="two-option">
@@ -140,9 +143,9 @@ export default function ProductCanvas() {
                             }
                           />
                         </div>
-                        <button>
+                        <p onClick={() => deleteSpecHandle(singleProduct)}>
                           <CLose />
-                        </button>
+                        </p>
                       </div>
                     );
                   })}
@@ -151,6 +154,7 @@ export default function ProductCanvas() {
                   <input
                     name="desc"
                     type="text"
+                    defaultValue={editProduct && editProduct.description}
                     placeholder="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, officia."
                   />
                 </div>

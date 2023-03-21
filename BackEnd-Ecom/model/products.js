@@ -12,9 +12,10 @@ const productSchema = new Schema(
     sale: Number,
     category: { type: String, required: true },
     spec: { type: [], required: false },
-    description: String,
+    description: { type: String, required: false },
     created_date: { type: String, required: true },
     update_date: { type: String, required: true },
+    image: { type: String, required: false },
   },
   {
     collection: "products",
