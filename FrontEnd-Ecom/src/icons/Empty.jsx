@@ -2,20 +2,24 @@ export default function Empty() {
   return (
     <div
       style={{
-        textAlign: "center",
+        justifyContent: "center",
         height: "80vh",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
       }}
     >
       <svg
-        width="600"
+        width="300"
         height="300"
         viewBox="0 0 275 288"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        style={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
       >
         <g filter="url(#filter0_d_2006_865)">
           <rect x="4" y="0.5" width="267" height="228" fill="url(#pattern0)" />
