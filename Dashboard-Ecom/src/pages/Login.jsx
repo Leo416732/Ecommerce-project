@@ -22,13 +22,15 @@ export default function Login() {
     if (email === "") {
       alert("wrong");
     } else {
-      axios.post("http://localhost:2020/users", {
-        email,
-        password,
-        name,
-        phone: Number(phone),
-        date: currentDate(),
-      });
+      axios
+        .post("http://localhost:2020/register", {
+          email,
+          password,
+          name,
+          phone: Number(phone),
+          address,
+        })
+        .then((res) => alert(res.data.message));
     }
   }
   return (

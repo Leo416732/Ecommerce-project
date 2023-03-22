@@ -14,20 +14,20 @@ export default function UserProvider({ children }) {
     }
   }, []);
 
-  function loginHandler(userName, password) {
+  function loginHandler(email, password) {
     axios
-      .post(`http://localhost:2020/user`, {
-        userName,
+      .post(`http://localhost:2020/userPost`, {
+        email,
         password,
       })
       .then(
         (res) => (
           localStorage.setItem("currentUser", JSON.stringify(res.data)),
           setCurrentUser(res.data),
-          navigate("/admin/controlBoard")
+          navigate("/profile")
         )
       )
-      .catch((res) => console.log(res.response.data));
+      .catch((res) => alert(res.response.data));
   }
   function logoutHandler() {
     localStorage.removeItem("currentUser");
