@@ -14,10 +14,10 @@ export default function UsersContext({ children }) {
     }
   }, []);
 
-  function loginHandler(userName, password) {
+  function loginHandler(email, password) {
     axios
-      .post(`http://localhost:2020/user`, {
-        userName,
+      .post(`http://localhost:2020/userPost`, {
+        email,
         password,
       })
       .then(

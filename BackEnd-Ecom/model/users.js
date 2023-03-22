@@ -3,17 +3,26 @@ import mongoose, { Schema } from "mongoose";
 const userSchema = new Schema(
   {
     name: { type: String, required: true },
-    password: { type: String, required: true },
-    email: { type: String, unique: true, required: true },
-    phone: { type: Number, required: true },
-    role: String,
-    login_date: String,
+    role: { type: String, required: true },
+    login_date: { type: String, required: true },
+    address: { type: String, required: false },
+    phone: { type: Number, required: false },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+      unique: false,
+    },
   },
   {
     collection: "users",
   }
 );
 
-const Users = mongoose.model("Users", productSchema, "users");
+const Users = mongoose.model("Users", userSchema, "users");
 
 export default Users;

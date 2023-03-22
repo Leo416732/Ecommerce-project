@@ -11,6 +11,7 @@ export default function Login() {
   const [name, setDataName] = useState("");
   const [password, setDataPass] = useState("");
   const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
 
   //loginHandler
   function loginHandle(e) {
@@ -23,12 +24,15 @@ export default function Login() {
     if (email === "") {
       alert("wrong");
     } else {
-      axios.post("http://localhost:2020/users", {
-        email,
-        password,
-        name,
-        phone: Number(phone),
-      });
+      axios
+        .post("http://localhost:2020/register", {
+          email,
+          password,
+          name,
+          phone: Number(phone),
+          address,
+        })
+        .then((res) => alert(res.data.message));
     }
   }
   return (
@@ -94,6 +98,11 @@ export default function Login() {
                       onChange={(e) => setPhone(e.target.value)}
                       type="number"
                       placeholder="phone"
+                    />
+                    <input
+                      onChange={(e) => setAddress(e.target.value)}
+                      type="address"
+                      placeholder="address"
                     />
                   </div>
                   <div className="modal-footer">
