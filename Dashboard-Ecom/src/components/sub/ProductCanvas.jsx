@@ -44,6 +44,7 @@ export default function ProductCanvas() {
       category: e.target.category.value.toLowerCase(),
       spec: getSpec,
       description: e.target.desc.value,
+      role: "admin",
     };
 
     edit ? put(obj) : post(obj, e);

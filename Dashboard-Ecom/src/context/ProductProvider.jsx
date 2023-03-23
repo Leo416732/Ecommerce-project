@@ -21,7 +21,10 @@ export default function Handlers({ children }) {
   }
   function deleteHandler(name) {
     axios
-      .delete(`http://localhost:2020/productDel?name=${name}`)
+      .delete(`http://localhost:2020/productDel?name=${name}`, {
+        role: "admin",
+        name: "a",
+      })
       .then((res) => res.statusText === "OK" && alert("delete"));
     setIsAction(isAction + 1);
   }
@@ -30,6 +33,8 @@ export default function Handlers({ children }) {
       .get("http://localhost:2020/productsGet")
       .then((products) => setData(products.data));
   }, [isAction]);
+
+  console.log(data);
   return (
     <ProductsContext.Provider
       value={{

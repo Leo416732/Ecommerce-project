@@ -1,25 +1,28 @@
 import Products from "../model/products.js";
 import moment from "moment";
 import "../config/mongoose-config.js";
+import Category from "../model/category.js";
 
 //get products
 export async function getProducts() {
-  const products = await Products.find();
-  if (products) {
-    return products;
-  }
+  return await Products.find().populate("category");
 }
 
 const date = moment().format("llll");
 
 //post product
 export async function postProduct(newProd) {
+  const category = await Category.find({
+    name: newProd.category,
+  });
+  console.log(category[0]._id);
+
   const prod = await Products.create({
     name: newProd.name,
     price: newProd.price,
     stock: newProd.stock,
     sale: newProd.sale,
-    category: newProd.category,
+    category: category[0]._id,
     description: newProd.description,
     spec: newProd.spec,
     created_date: date,
@@ -30,7 +33,7 @@ export async function postProduct(newProd) {
 
 //delete product
 export async function deleteProduct(deleteProName) {
-  return await Products.deleteMany({ name: deleteProName });
+  return await Products.deleteOne({ name: deleteProName });
 }
 
 //update product

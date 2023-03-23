@@ -4,13 +4,22 @@ import ProductCanvas from "../components/sub/ProductCanvas";
 import Product from "./Product";
 import Pagination from "../components/sub/Pagination";
 import { useParams } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ProductsContext } from "../context/ProductProvider";
+import Test from "../components/sub/Test";
 
 export default function Products() {
   const { data, handleShow } = useContext(ProductsContext);
   const pageNum = useParams();
   const number = pageNum.id;
+
+  const [show, setShow] = useState(false);
+  const handleCloseCate = () => setShow(false);
+  const handleShowCate = () => setShow(true);
+
+  function categoryAdd() {
+    console.log();
+  }
 
   return (
     <div className="dashboard">
@@ -30,7 +39,19 @@ export default function Products() {
         >
           + Бараа нэмэх
         </Button>
+        <Button
+          className="add-product-button"
+          variant="primary"
+          onClick={handleShowCate}
+        >
+          + Category нэмэх
+        </Button>
         <ProductCanvas />
+        <Test
+          handleShowCate={handleShowCate}
+          handleCloseCate={handleCloseCate}
+          show={show}
+        />
       </div>
 
       <div className="products-title">

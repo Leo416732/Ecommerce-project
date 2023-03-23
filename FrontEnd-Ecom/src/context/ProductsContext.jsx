@@ -12,6 +12,8 @@ export default function ProductsContext({ children }) {
       .then((response) => setData(response.data));
   }, []);
 
+  console.log(data);
+
   return (
     <ProductContext.Provider
       value={{

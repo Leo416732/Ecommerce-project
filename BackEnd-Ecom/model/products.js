@@ -10,7 +10,7 @@ const productSchema = new Schema(
     },
     stock: { type: Number, required: true },
     sale: Number,
-    category: { type: Schema.Types.ObjectId, ref: "category" },
+    category: { type: Schema.Types.ObjectId, ref: "Category" },
     spec: { type: [], required: false },
     description: { type: String, required: false },
     created_date: { type: String, required: true },

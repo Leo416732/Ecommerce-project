@@ -10,3 +10,7 @@ export async function postCategory(newCate) {
     created_date: date,
   });
 }
+
+export async function getCategories() {
+  return await Category.find();
+}

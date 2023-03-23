@@ -20,4 +20,6 @@ export async function userRegister(newUser) {
   }
 }
 
-export async function userLogin() {}
+export async function userLogin(email) {
+  return await Users.findOne({ email });
+}

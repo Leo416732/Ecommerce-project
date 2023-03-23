@@ -1,6 +1,7 @@
 import express from "express";
 import cloudinary from "../config/cloudinary.js";
 import upload from "../util/multer-handler.js";
+import verifyRole from "../middleware/authorization.js";
 import {
   deleteProduct,
   getProducts,
@@ -14,6 +15,7 @@ const products_router = express.Router();
 products_router.post(
   "/productPost",
   upload.single("file"),
+
   async (req, res) => {
     const response = await cloudinary.v2.uploader.upload(`${req.file.path}`, {
       folder: `${req.file.filename}`,
@@ -28,15 +30,6 @@ products_router.post(
   }
 );
 
-products_router.post("/productPost", async (req, res) => {
-  const result = await postProduct(req.body);
-  if (result !== null) {
-    res.status(200).send(result);
-  } else {
-    res.status(400).send("something error");
-  }
-});
-
 //mongoose router
 products_router.get("/productsGet", async (req, res) => {
   const result = await getProducts();
@@ -44,6 +37,7 @@ products_router.get("/productsGet", async (req, res) => {
 });
 
 products_router.delete("/productDel", async (req, res) => {
+  console.log(req.body);
   const query = req.query;
   if (query && query.name) {
     const result = await deleteProduct(query.name);
@@ -53,7 +47,7 @@ products_router.delete("/productDel", async (req, res) => {
   }
 });
 
-products_router.put("/productPut", async (req, res) => {
+products_router.put("/productPut", verifyRole, async (req, res) => {
   let oldProd = req.query;
   let newProd = req.body;
 

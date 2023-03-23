@@ -16,17 +16,20 @@ export default function UserProvider({ children }) {
 
   function loginHandler(email, password) {
     axios
-      .post(`http://localhost:2020/userPost`, {
+      .post(`http://localhost:2020/login`, {
         email,
         password,
       })
-      .then(
-        (res) => (
-          localStorage.setItem("currentUser", JSON.stringify(res.data)),
-          setCurrentUser(res.data),
-          navigate("/profile")
-        )
-      )
+      .then((res) => {
+        console.log(res);
+        alert(res.data.status);
+        if (res.data.success == true) {
+          localStorage.setItem("currentUser", JSON.stringify(res.data.data)),
+            setCurrentUser(res.data.data),
+            navigate("/admin");
+          localStorage.setItem("jwt", res.data.token);
+        }
+      })
       .catch((res) => alert(res.response.data));
   }
   function logoutHandler() {

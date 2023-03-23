@@ -16,7 +16,7 @@ export default function Product(prop) {
       <p className="product-price">${product && product.price}</p>
       <p className="product-stock">{product && product.stock}</p>
       <p className="product-sale">{product && product.sale}%</p>
-      <p className="product-category">{product && product.category}</p>
+      <p className="product-category">{product && product.category.name}</p>
       <div className="product-edit">
         <div className="dropdown">
           <button
