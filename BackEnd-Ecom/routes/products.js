@@ -26,7 +26,7 @@ products_router.post(
       image: response?.secure_url,
     };
     const result = await postProduct(product);
-    res.status(200).json(result);
+    res.status(200).json({ result, success: "ok" });
   }
 );
 

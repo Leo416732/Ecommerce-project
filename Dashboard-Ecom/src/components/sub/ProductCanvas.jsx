@@ -6,7 +6,7 @@ import { ProductsContext } from "../../context/ProductProvider";
 import "../../styles/offcanvas.css";
 import CLose from "../icon/Close";
 
-export default function ProductCanvas() {
+export default function ProductCanvas({ categories }) {
   const {
     handleClose,
     editProduct,
@@ -24,7 +24,9 @@ export default function ProductCanvas() {
     data.append("file", e.target.image.files[0]);
     data.append("newProduct", JSON.stringify(obj));
 
-    axios.post(`http://localhost:2020/productPost`, data);
+    axios
+      .post(`http://localhost:2020/productPost`, data)
+      .then((res) => res.data.success == "ok" && alert("add new product"));
   }
   function put(obj) {
     axios
@@ -167,15 +169,19 @@ export default function ProductCanvas() {
                 <label htmlFor="">Категори сонгох</label>
                 <select
                   className="offcanvas-product-select"
-                  defaultValue={editProduct && editProduct.category}
+                  defaultValue={`${
+                    editProduct &&
+                    editProduct.category &&
+                    editProduct.category.name
+                  }`}
                   name="category"
                 >
-                  <option value="Computers & Tablets">
-                    Computers & Tablets
-                  </option>
-                  <option value="Gaming Console">Gaming Console</option>
-                  <option value="Telescope">Telescope</option>
-                  <option value="Appliances">Appliances</option>
+                  {categories &&
+                    categories.map((cate, i) => (
+                      <option key={i} value={cate.name}>
+                        {cate.name}
+                      </option>
+                    ))}
                 </select>
               </div>
               <button type="submit" className="add-product-button">

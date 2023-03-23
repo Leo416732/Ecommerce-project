@@ -4,12 +4,15 @@ import ProductCanvas from "../components/sub/ProductCanvas";
 import Product from "./Product";
 import Pagination from "../components/sub/Pagination";
 import { useParams } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductsContext } from "../context/ProductProvider";
-import Test from "../components/sub/Test";
+import CategoryCanvas from "../components/sub/CategoryCanvas";
+import axios from "axios";
 
 export default function Products() {
   const { data, handleShow } = useContext(ProductsContext);
+  const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState();
   const pageNum = useParams();
   const number = pageNum.id;
 
@@ -17,8 +20,20 @@ export default function Products() {
   const handleCloseCate = () => setShow(false);
   const handleShowCate = () => setShow(true);
 
-  function categoryAdd() {
-    console.log();
+  useEffect(() => {
+    axios
+      .get("http://localhost:2020/categoryGet")
+      .then((cate) => setCategories(cate.data));
+  }, []);
+
+  function selectCate(name) {
+    if (name == "all") {
+      setProducts(data);
+    } else {
+      let filterProduct =
+        data && data.filter((prod) => prod.category.name === name);
+      setProducts(filterProduct);
+    }
   }
 
   return (
@@ -39,25 +54,28 @@ export default function Products() {
         >
           + Бараа нэмэх
         </Button>
-        <Button
-          className="add-product-button"
-          variant="primary"
-          onClick={handleShowCate}
-        >
-          + Category нэмэх
-        </Button>
-        <ProductCanvas />
-        <Test
+
+        <ProductCanvas categories={categories} />
+        <CategoryCanvas
           handleShowCate={handleShowCate}
           handleCloseCate={handleCloseCate}
           show={show}
         />
       </div>
+      <button className="none" onClick={handleShowCate}>
+        + Category нэмэх
+      </button>
 
       <div className="products-title">
-        <div>
-          <img src="../correct.svg" alt="" /> Бүгд
-        </div>
+        <select name="" onChange={(e) => selectCate(e.target.value)}>
+          <option value="all">All</option>
+          {categories &&
+            categories.map((cate, i) => (
+              <option key={i} value={cate.name}>
+                {cate.name}
+              </option>
+            ))}
+        </select>
       </div>
       <div className="product-container">
         <div className="product-title">
@@ -69,12 +87,17 @@ export default function Products() {
           <p className="product-categ">Категори</p>
         </div>
         <div>
-          {data &&
-            data
-              .slice(0 + 8 * (number - 1), 8 + 8 * (number - 1))
-              .map((product, index) => (
-                <Product key={index} product={product} />
-              ))}
+          {products
+            ? products
+                .slice(0 + 8 * (number - 1), 8 + 8 * (number - 1))
+                .map((product, index) => (
+                  <Product key={index} product={product} />
+                ))
+            : data
+                .slice(0 + 8 * (number - 1), 8 + 8 * (number - 1))
+                .map((product, index) => (
+                  <Product key={index} product={product} />
+                ))}
         </div>
       </div>
       <div>

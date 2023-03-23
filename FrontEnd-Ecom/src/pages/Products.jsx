@@ -14,12 +14,6 @@ export default function Products() {
   const [products, setProducts] = useState();
   const [activeBtn, setActiveBtn] = useState(currentBtn && currentBtn);
 
-  // const prod =
-  //   data &&
-  //   data.filter((product) =>
-  //     product.category.includes(currentBtn.toLowerCase())
-  //   );
-
   useEffect(() => {
     let currentBtn = localStorage.getItem("currentBtn");
     if (currentBtn) {
@@ -29,7 +23,7 @@ export default function Products() {
         const prod =
           data &&
           data.filter((name) =>
-            name.category.includes(currentBtn.toLowerCase())
+            name.category.name.includes(currentBtn.toLowerCase())
           );
         setProducts(prod);
       }

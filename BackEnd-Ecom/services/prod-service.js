@@ -17,7 +17,7 @@ export async function postProduct(newProd) {
   });
   console.log(category[0]._id);
 
-  const prod = await Products.create({
+  return await Products.create({
     name: newProd.name,
     price: newProd.price,
     stock: newProd.stock,

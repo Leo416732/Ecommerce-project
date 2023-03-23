@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import React from "react";
 
-export default function Test(prop) {
+export default function CategoryCanvas(prop) {
   const { handleShowCate, handleCloseCate, show } = prop;
   const [name, setName] = useState();
   function saveCate() {
@@ -17,8 +17,8 @@ export default function Test(prop) {
   return (
     <>
       <Modal show={show} onHide={handleShowCate}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+        <Modal.Header closeButton onClick={handleCloseCate}>
+          <Modal.Title>Add Category</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <input placeholder="name" onChange={(e) => setName(e.target.value)} />

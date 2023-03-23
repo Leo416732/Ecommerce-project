@@ -34,7 +34,6 @@ export default function Handlers({ children }) {
       .then((products) => setData(products.data));
   }, [isAction]);
 
-  console.log(data);
   return (
     <ProductsContext.Provider
       value={{

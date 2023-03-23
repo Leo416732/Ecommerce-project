@@ -63,7 +63,7 @@ export default function ProductCard() {
                   <a href="/profile">Home</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                  {productDeatail && productDeatail[0].category}
+                  {productDeatail && productDeatail[0].category.name}
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   {productDeatail && productDeatail[0].name}

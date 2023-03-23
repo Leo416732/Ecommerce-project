@@ -13,6 +13,7 @@ export default function Pagination() {
     setCurrentPage(pageNum && Number(pageNum.id));
   }, [pageNum]);
   const lastCount = Math.ceil(length / 8);
+  console.log(lastCount);
   return (
     <div className="pagination">
       {currentPage > 1 && currentPage < lastCount && (
@@ -113,7 +114,7 @@ export default function Pagination() {
           </Link>
         </>
       )}
-      {currentPage === lastCount && (
+      {currentPage === lastCount && currentPage > 4 && (
         <>
           <Link
             onClick={() => setCurrentPage(currentPage - 1)}
