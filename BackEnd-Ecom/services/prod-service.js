@@ -12,10 +12,12 @@ const date = moment().format("llll");
 
 //post product
 export async function postProduct(newProd) {
+  console.log(newProd);
   const category = await Category.find({
     name: newProd.category,
   });
-  console.log(category[0]._id);
+
+  console.log(category);
 
   return await Products.create({
     name: newProd.name,

@@ -39,7 +39,7 @@ export default function Product(prop) {
               <a
                 onClick={(product) => deleteHandler(product.target.name)}
                 className="dropdown-item"
-                name={product && product.name}
+                name={product && product._id}
               >
                 Устгах
               </a>

@@ -13,147 +13,171 @@ export default function Pagination() {
     setCurrentPage(pageNum && Number(pageNum.id));
   }, [pageNum]);
   const lastCount = Math.ceil(length / 8);
-  console.log(lastCount);
   return (
     <div className="pagination">
-      {currentPage > 1 && currentPage < lastCount && (
+      {lastCount > 1 && (
         <>
-          <Link
-            to={`/admin/products/page/${currentPage - 1}`}
-            onClick={() => setCurrentPage(currentPage - 1)}
-          >
-            <PageBtn btnName={"Өмнөх"} btnClass={"page-btn"} />
-          </Link>
-          {currentPage > 2 && (
-            <>
-              <Link
-                to={`/admin/products/page/${1}`}
-                onClick={() => setCurrentPage(1)}
-              >
-                <PageBtn btnName={1} btnClass={"page-btn"} />
-              </Link>
-              <p>...</p>
-            </>
-          )}
+          {currentPage > 1 &&
+            currentPage <= lastCount &&
+            currentPage !== lastCount && (
+              <>
+                <Link
+                  to={`/admin/products/page/${currentPage - 1}`}
+                  onClick={() => setCurrentPage(currentPage - 1)}
+                >
+                  <PageBtn btnName={"Өмнөх"} btnClass={"page-btn"} />
+                </Link>
+                {currentPage > 2 && (
+                  <>
+                    <Link
+                      to={`/admin/products/page/${1}`}
+                      onClick={() => setCurrentPage(1)}
+                    >
+                      <PageBtn btnName={1} btnClass={"page-btn"} />
+                    </Link>
+                    <p>...</p>
+                  </>
+                )}
 
-          <Link
-            to={`/admin/products/page/${currentPage - 1}`}
-            onClick={() => setCurrentPage(currentPage - 1)}
-          >
-            <PageBtn btnName={currentPage - 1} btnClass={"page-btn"} />
-          </Link>
-          <Link to={`/admin/products/page/${currentPage}`}>
-            <PageBtn btnName={currentPage} btnClass={"page-active"} />
-          </Link>
-          {currentPage < lastCount - 1 && (
+                <Link
+                  to={`/admin/products/page/${currentPage - 1}`}
+                  onClick={() => setCurrentPage(currentPage - 1)}
+                >
+                  <PageBtn btnName={currentPage - 1} btnClass={"page-btn"} />
+                </Link>
+                <Link to={`/admin/products/page/${currentPage}`}>
+                  <PageBtn btnName={currentPage} btnClass={"page-active"} />
+                </Link>
+                {currentPage < lastCount - 1 && lastCount > 4 && (
+                  <>
+                    <Link
+                      to={`/admin/products/page/${currentPage + 1}`}
+                      onClick={() => setCurrentPage(currentPage + 1)}
+                    >
+                      <PageBtn
+                        btnName={currentPage + 1}
+                        btnClass={"page-btn"}
+                      />
+                    </Link>
+                    <p>...</p>
+                  </>
+                )}
+                {lastCount !== currentPage && (
+                  <>
+                    <Link
+                      to={`/admin/products/page/${lastCount}`}
+                      onClick={() => setCurrentPage(lastCount)}
+                    >
+                      <PageBtn btnName={lastCount} btnClass={"page-btn"} />
+                    </Link>
+                    <Link
+                      to={`/admin/products/page/${currentPage + 1}`}
+                      onClick={() => setCurrentPage(currentPage + 1)}
+                    >
+                      <PageBtn btnName={"Дараах"} btnClass={"page-btn"} />
+                    </Link>
+                  </>
+                )}
+              </>
+            )}
+          {currentPage === 1 && lastCount > 1 && (
             <>
+              <Link to={`/admin/products/page/${currentPage}`}>
+                <PageBtn btnName={currentPage} btnClass={"page-active"} />
+              </Link>
               <Link
                 to={`/admin/products/page/${currentPage + 1}`}
                 onClick={() => setCurrentPage(currentPage + 1)}
               >
                 <PageBtn btnName={currentPage + 1} btnClass={"page-btn"} />
               </Link>
-              <p>...</p>
+              {lastCount > 2 && (
+                <>
+                  <Link
+                    to={`/admin/products/page/${currentPage + 2}`}
+                    onClick={() => setCurrentPage(currentPage + 2)}
+                  >
+                    <PageBtn btnName={currentPage + 2} btnClass={"page-btn"} />
+                  </Link>
+                </>
+              )}
+              {lastCount > 4 && (
+                <>
+                  {" "}
+                  <Link
+                    to={`/admin/products/page/${currentPage + 3}`}
+                    onClick={() => setCurrentPage(currentPage + 3)}
+                  >
+                    <PageBtn btnName={currentPage + 3} btnClass={"page-btn"} />
+                  </Link>
+                  <p>...</p>
+                </>
+              )}
+              {lastCount !== currentPage && (
+                <>
+                  {" "}
+                  {lastCount > 4 && (
+                    <Link
+                      to={`/admin/products/page/${lastCount}`}
+                      onClick={() => setCurrentPage(lastCount)}
+                    >
+                      <PageBtn btnName={lastCount} btnClass={"page-btn"} />
+                    </Link>
+                  )}
+                  <Link
+                    to={`/admin/products/page/${currentPage + 1}`}
+                    onClick={() => setCurrentPage(currentPage + 1)}
+                  >
+                    <PageBtn btnName={"Дараах"} btnClass={"page-btn"} />
+                  </Link>
+                </>
+              )}
             </>
           )}
-          <Link
-            to={`/admin/products/page/${lastCount}`}
-            onClick={() => setCurrentPage(lastCount)}
-          >
-            <PageBtn btnName={lastCount} btnClass={"page-btn"} />
-          </Link>
-
-          <Link
-            to={`/admin/products/page/${currentPage + 1}`}
-            onClick={() => setCurrentPage(currentPage + 1)}
-          >
-            <PageBtn btnName={"Дараах"} btnClass={"page-btn"} />
-          </Link>
-        </>
-      )}
-      {currentPage === 1 && (
-        <>
-          <Link to={`/admin/products/page/${currentPage}`}>
-            <PageBtn btnName={currentPage} btnClass={"page-active"} />
-          </Link>
-          <Link
-            to={`/admin/products/page/${currentPage + 1}`}
-            onClick={() => setCurrentPage(currentPage + 1)}
-          >
-            <PageBtn btnName={currentPage + 1} btnClass={"page-btn"} />
-          </Link>
-          <Link
-            to={`/admin/products/page/${currentPage + 2}`}
-            onClick={() => setCurrentPage(currentPage + 2)}
-          >
-            <PageBtn btnName={currentPage + 2} btnClass={"page-btn"} />
-          </Link>
-          {lastCount > 4 && (
-            <>
-              {" "}
-              <Link
-                to={`/admin/products/page/${currentPage + 3}`}
-                onClick={() => setCurrentPage(currentPage + 3)}
-              >
-                <PageBtn btnName={currentPage + 3} btnClass={"page-btn"} />
-              </Link>
-              <p>...</p>
-            </>
-          )}
-          <Link
-            to={`/admin/products/page/${lastCount}`}
-            onClick={() => setCurrentPage(lastCount)}
-          >
-            <PageBtn btnName={lastCount} btnClass={"page-btn"} />
-          </Link>
-          <Link
-            to={`/admin/products/page/${currentPage + 1}`}
-            onClick={() => setCurrentPage(currentPage + 1)}
-          >
-            <PageBtn btnName={"Дараах"} btnClass={"page-btn"} />
-          </Link>
-        </>
-      )}
-      {currentPage === lastCount && currentPage > 4 && (
-        <>
-          <Link
-            onClick={() => setCurrentPage(currentPage - 1)}
-            to={`/admin/products/page/${currentPage - 1}`}
-          >
-            <PageBtn btnName={"Өмнөх"} btnClass={"page-btn"} />
-          </Link>
-          {lastCount > 4 && (
+          {currentPage === lastCount && (
             <>
               <Link
-                to={`/admin/products/page/${1}`}
-                onClick={() => setCurrentPage(1)}
+                onClick={() => setCurrentPage(currentPage - 1)}
+                to={`/admin/products/page/${currentPage - 1}`}
               >
-                <PageBtn btnName={1} btnClass={"page-btn"} />
+                <PageBtn btnName={"Өмнөх"} btnClass={"page-btn"} />
               </Link>
-              <p>...</p>
+              {lastCount > 4 && (
+                <>
+                  <Link
+                    to={`/admin/products/page/${1}`}
+                    onClick={() => setCurrentPage(1)}
+                  >
+                    <PageBtn btnName={1} btnClass={"page-btn"} />
+                  </Link>
+                  <p>...</p>
+                </>
+              )}
+              {currentPage > 4 && (
+                <Link
+                  onClick={() => setCurrentPage(currentPage - 3)}
+                  to={`/admin/products/page/${currentPage - 3}`}
+                >
+                  <PageBtn btnName={currentPage - 3} btnClass={"page-btn"} />
+                </Link>
+              )}
+              <Link
+                onClick={() => setCurrentPage(currentPage - 2)}
+                to={`/admin/products/page/${currentPage - 2}`}
+              >
+                <PageBtn btnName={currentPage - 2} btnClass={"page-btn"} />
+              </Link>
+              <Link
+                onClick={() => setCurrentPage(currentPage - 1)}
+                to={`/admin/products/page/${currentPage - 1}`}
+              >
+                <PageBtn btnName={currentPage - 1} btnClass={"page-btn"} />
+              </Link>
+              <Link to={`/admin/products/page/${currentPage}`}>
+                <PageBtn btnName={currentPage} btnClass={"page-active"} />
+              </Link>
             </>
           )}
-          <Link
-            onClick={() => setCurrentPage(currentPage - 3)}
-            to={`/admin/products/page/${currentPage - 3}`}
-          >
-            <PageBtn btnName={currentPage - 3} btnClass={"page-btn"} />
-          </Link>
-          <Link
-            onClick={() => setCurrentPage(currentPage - 2)}
-            to={`/admin/products/page/${currentPage - 2}`}
-          >
-            <PageBtn btnName={currentPage - 2} btnClass={"page-btn"} />
-          </Link>
-          <Link
-            onClick={() => setCurrentPage(currentPage - 1)}
-            to={`/admin/products/page/${currentPage - 1}`}
-          >
-            <PageBtn btnName={currentPage - 1} btnClass={"page-btn"} />
-          </Link>
-          <Link to={`/admin/products/page/${currentPage}`}>
-            <PageBtn btnName={currentPage} btnClass={"page-active"} />
-          </Link>
         </>
       )}
     </div>

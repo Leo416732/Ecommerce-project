@@ -6,7 +6,7 @@ const date = moment().format("llll");
 
 export async function postCategory(newCate) {
   return await Category.create({
-    name: newCate.name,
+    name: newCate.name.toLowerCase(),
     created_date: date,
   });
 }
