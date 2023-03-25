@@ -15,7 +15,14 @@ export default function ProductCard() {
   let productDeatail = data && data.filter((prod) => prod._id === test.id);
 
   function addCount() {
-    if (x < productDeatail[0].stock) {
+    // let baskets = JSON.parse(localStorage.getItem("baskets")).find(
+    //   (a) => a._id === productDeatail[0]._id
+    // );
+    // console.log(baskets.stock);
+    if (
+      x < productDeatail[0].stock
+      // productDeatail[0].stock >= baskets.stock + x
+    ) {
       setX(x + 1);
     }
   }
@@ -28,8 +35,8 @@ export default function ProductCard() {
     data &&
     data.filter(
       (subProd) =>
-        subProd.category === productDeatail[0].category &&
-        subProd.id !== productDeatail[0].id
+        subProd.category.name === productDeatail[0].category.name &&
+        subProd._id !== productDeatail[0]._id
     );
   function addCard() {
     setCount((prev) => prev + 1);
@@ -40,7 +47,7 @@ export default function ProductCard() {
       const findData = baskets.find(
         (product) => product._id === productDeatail[0]._id
       );
-      if (findData) {
+      if (findData && findData.stock < productDeatail[0].stock) {
         baskets[baskets.indexOf(findData)].stock =
           baskets[baskets.indexOf(findData)].stock + x;
         baskets = [...baskets];

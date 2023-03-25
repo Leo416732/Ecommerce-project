@@ -1,16 +1,30 @@
 import express from "express";
-import { userLogin, userRegister } from "../services/user-service.js";
+import { userList, userLogin, userRegister } from "../services/user-service.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import auth from "../middleware/auth.js";
+import verifyRole from "../middleware/authorization.js";
 
 const users_router = express.Router();
 
 //mongoose
+users_router.post("/userList", verifyRole, async (req, res) => {
+  const result = await userList();
+  if (result) {
+    res.status(200).send({
+      message: "Successfully",
+      result,
+    });
+  } else {
+    res.status(500).send({
+      message: "Error",
+    });
+  }
+});
+
 users_router.post("/register", async (request, response) => {
   if (request.body.email && request.body.password) {
     const result = await userRegister(request.body);
-    console.log("result:", result);
     if (result) {
       response.status(201).send({
         message: "User Created Successfully",
@@ -46,7 +60,7 @@ users_router.post("/login", async (req, res) => {
     if (user && (await bcrypt.compare(password, user.password))) {
       const token = jwt.sign(
         {
-          user_id: user._id,
+          _id: user._id,
           email,
           name: user.name,
           phone: user.phone,

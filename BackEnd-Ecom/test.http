@@ -1,0 +1,200 @@
+POST http://localhost:2020/productsPost HTTP/1.1
+Content-Type: application/json
+
+[
+    {
+  "name": "Samsung Galaxy Watch 3",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/81FhD9XoYHL._AC_SL1500_.jpg",
+  "price": 399,
+  "stock": 7,
+  "sale": 0,
+  "category": "gadgets",
+  "spec": [
+    {
+      "DisplaySize": "1.4 inches"
+    },
+    {
+      "BatteryLife": "Up to 7 days"
+    },
+    {
+      "FitnessFeatures": "Advanced run coaching, VO2 max, blood oxygen, heart rate and more"
+    },
+    {
+      "WaterResistance": "50 meters"
+    }
+  ]
+},
+{
+  "name": "Bose QuietComfort Earbuds",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/61oebCtpWZL._AC_SL1500_.jpg",
+  "price": 279,
+  "stock": 9,
+  "sale": 0,
+  "category": "headphones",
+  "spec": [
+    {
+      "NoiseCancellation": "11 levels"
+    },
+    {
+      "BatteryLife": "Up to 6 hours"
+    },
+    {
+      "BluetoothRange": "30 feet"
+    },
+    {
+      "WaterResistance": "IPX4"
+    }
+  ]
+},
+{
+  "name": "Apple MacBook Pro 13-inch",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/71gD8WdSlaL._AC_SL1500_.jpg",
+  "price": 1299,
+  "stock": 5,
+  "sale": 0,
+  "category": "computers & tablets",
+  "spec": [
+    {
+      "DisplaySize": "13.3 inches"
+    },
+    {
+      "CPU": "10th-generation Intel Core i5"
+    },
+    {
+      "HardDrive": "512GB SSD"
+    },
+    {
+      "RAM": "16GB"
+    }
+  ]
+},
+
+{
+  "name": "Samsung Galaxy Tab S7+",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/71eKK5y5w5L._AC_SL1500_.jpg",
+  "price": 849,
+  "stock": 8,
+  "sale": 10,
+  "category": "computers & tablets",
+  "spec": [
+    {
+      "DisplaySize": "12.4 inches"
+    },
+    {
+      "CPU": "Qualcomm Snapdragon 865 Plus"
+    },
+    {
+      "HardDrive": "256GB SSD"
+    },
+    {
+      "RAM": "8GB"
+    }
+  ]
+},
+
+{
+  "name": "Dyson V11 Absolute Cordless Vacuum",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/71XN-BTgpfL._AC_SL1500_.jpg",
+  "price": 599,
+  "stock": 3,
+  "sale": 0,
+  "category": "appliances",
+  "spec": [
+    {
+      "Type": "Cordless stick vacuum"
+    },
+    {
+      "BatteryLife": "Up to 60 minutes"
+    },
+    {
+      "Filtration": "Advanced whole-machine filtration"
+    },
+    {
+      "Weight": "6.68 pounds"
+    }
+  ]
+},
+
+{
+  "name": "Sony PlayStation 5",
+  "image": "https://images-na.ssl-images-amazon.com/images/I/619BkvKW35L._SL1500_.jpg",
+  "price": 499,
+  "stock": 2,
+  "sale": 0,
+  "category": "gadgets",
+  "spec": [
+    {
+      "CPU": "AMD Zen 2-based CPU with 8 cores at 3.5GHz"
+    },
+    {
+      "GPU": "AMD RDNA 2-based GPU with 36 CUs at 2.23GHz"
+    },
+    {
+      "Storage": "825GB SSD"
+    },
+    {
+      "RAM": "16GB GDDR6"
+    }
+  ]
+},
+{
+"name":"Amazon Echo Dot (3rd Gen)",
+"image":"https://i.ebayimg.com/images/g/Ab8AAOSwRJNf6-jF/s-l1600.jpg",
+"price":39,
+"stock":20,
+"sale":0,
+"category":"appliances",
+"spec":[
+{
+"Connectivity":"Wi-Fi, Bluetooth"
+},
+{
+"VoiceAssistant":"Alexa"
+},
+{
+"Dimensions":"3.9 x 3.9 x 1.7"
+}
+]
+},
+{
+"name":"Nespresso VertuoPlus Coffee and Espresso Maker",
+"image":"https://i.ebayimg.com/images/g/TtsAAOSwkPxfm8Jc/s-l1600.jpg",
+"price":129,
+"stock":15,
+"sale":20,
+"category":"appliances",
+"spec":[
+{
+"BrewingMethods":"Coffee, Espresso"
+},
+{
+"Capacity":"54 oz water tank"
+},
+{
+"Dimensions":"5.6 x 16.2 x 12.8"
+}
+]
+},
+{
+"name":"Samsung Galaxy Watch Active2",
+"image":"https://i.ebayimg.com/images/g/pQQAAOSww8NgcDT9/s-l1600.jpg",
+"price":229,
+"stock":8,
+"sale":15,
+"category":"gadgets",
+"spec":[
+{
+"DisplaySize":"1.4"
+},
+{
+"Connectivity":"Bluetooth, Wi-Fi"
+},
+{
+"Sensors":"Accelerometer, Gyroscope, Heart rate, ECG"
+},
+{
+"Dimensions":"1.73 x 1.73 x 0.43"
+}
+]
+}
+]

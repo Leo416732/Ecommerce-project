@@ -1,18 +1,25 @@
+import { useEffect } from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../styles/sidemenu.css";
 import { urls } from "../util/data";
 
 export default function SideMenu() {
   let pageName = localStorage.getItem("pageName");
-  const [activeBtn, setActiveBtn] = useState(pageName);
-  localStorage.setItem("pageName", activeBtn);
+  const param = useParams();
+  const [activeBtn, setActiveBtn] = useState(pageName ? pageName : "DashBoard");
   const navigate = useNavigate();
+  localStorage.setItem("pageName", activeBtn);
 
   function activeButton(url) {
     navigate(`${url.url}`);
     setActiveBtn(url.name);
+    localStorage.setItem("pageName", url.name);
   }
+
+  useEffect(() => {
+    pageName && setActiveBtn(pageName);
+  }, []);
 
   return (
     <>
@@ -22,7 +29,11 @@ export default function SideMenu() {
             <div className="dashboard-button" key={index}>
               <button
                 className={
-                  activeBtn === url.name
+                  activeBtn
+                    ? activeBtn === url.name
+                      ? "Active dashboard-button"
+                      : "inactive dashboard-button"
+                    : "DashBoard" === url.name
                     ? "Active dashboard-button"
                     : "inactive dashboard-button"
                 }

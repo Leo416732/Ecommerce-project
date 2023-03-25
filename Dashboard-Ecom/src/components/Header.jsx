@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../context/UserProvider";
 import "../styles/header.css";
 import Logo from "./icon/Logo";
 import Logout from "./icon/Logout";
@@ -7,9 +9,15 @@ import Logout from "./icon/Logout";
 export default function AdminHeader() {
   const [search, setSearch] = useState();
   const navigate = useNavigate();
+  const { logoutHandler } = useContext(UserContext);
 
   function searchHandler() {
-    navigate(`/search/${search}`);
+    if (search) {
+      navigate(`/search/${search}`);
+      localStorage.setItem("pageName", "Search");
+    } else {
+      alert("something write");
+    }
   }
   return (
     <div className="navbar">
@@ -55,11 +63,14 @@ export default function AdminHeader() {
                 Та системээс гарахдаа итгэлтэй байна уу?
               </div>
               <div className="logout-buttons">
-                <a href="/">
-                  <button type="button" className="active-button">
-                    Тийм
-                  </button>
-                </a>
+                <button
+                  type="button"
+                  onClick={() => logoutHandler()}
+                  className="active-button"
+                  data-bs-toggle="disable"
+                >
+                  Тийм
+                </button>
                 <button
                   type="button"
                   className="dismiss-button"

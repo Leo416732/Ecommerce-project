@@ -4,6 +4,10 @@ import moment from "moment";
 
 const date = moment().format("llll");
 
+export async function userList() {
+  return await Users.find();
+}
+
 export async function userRegister(newUser) {
   const hashedPassword = await bcrypt.hash(newUser.password, 10);
   if (hashedPassword) {

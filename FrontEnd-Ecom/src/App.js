@@ -12,7 +12,6 @@ import axios from "axios";
 
 function App() {
   const { themeMode } = useContext(ThemeContext);
-  const navigate = useNavigate();
   const token = localStorage.getItem("jwt");
   useEffect(() => {
     token &&

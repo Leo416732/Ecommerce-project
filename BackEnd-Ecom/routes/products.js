@@ -11,11 +11,10 @@ import {
 
 const products_router = express.Router();
 
-//multer image and add product
+// multer image and add product
 products_router.post(
   "/productPost",
   upload.single("file"),
-
   async (req, res) => {
     const response = await cloudinary.v2.uploader.upload(`${req.file.path}`, {
       folder: `${req.file.filename}`,
@@ -30,17 +29,22 @@ products_router.post(
   }
 );
 
+// products_router.post("/productsPost", async (req, res) => {
+//   const result = await postProduct(req.body);
+//   res.status(200).json({ result, success: "ok" });
+// });
+
 //mongoose router
 products_router.get("/productsGet", async (req, res) => {
   const result = await getProducts();
   res.status(200).json(result);
 });
 
-products_router.delete("/productDel", async (req, res) => {
-  console.log(req.body);
+products_router.post("/productDel", verifyRole, async (req, res) => {
   const query = req.query;
-  if (query && query.name) {
-    const result = await deleteProduct(query.name);
+  console.log("role: ", req.body.role);
+  if (query && query.id) {
+    const result = await deleteProduct(query.id);
     res.status(200).send(result);
   } else {
     res.status(400).send("something wrong");

@@ -22,6 +22,7 @@ export default function Settings() {
     e.target.newPass.value = "";
     e.target.newPassVer.value = "";
   }
+
   function changePassword(e) {
     e.preventDefault();
     let obj;

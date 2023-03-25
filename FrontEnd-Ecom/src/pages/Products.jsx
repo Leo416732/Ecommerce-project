@@ -15,7 +15,6 @@ export default function Products() {
   const [activeBtn, setActiveBtn] = useState(currentBtn && currentBtn);
 
   useEffect(() => {
-    let currentBtn = localStorage.getItem("currentBtn");
     if (currentBtn) {
       if (currentBtn == "all") {
         setProducts(data);
@@ -27,6 +26,8 @@ export default function Products() {
           );
         setProducts(prod);
       }
+    } else {
+      localStorage.setItem("currentBtn", "all");
     }
   }, [currentBtn, data, activeBtn == currentBtn]);
 

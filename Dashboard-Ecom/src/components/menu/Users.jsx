@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import "../../styles/user.css";
-import { ProductsContext } from "../../context/ProductProvider";
+import { UserContext } from "../../context/UserProvider";
 
 export default function Users() {
-  const { usersList } = useContext(ProductsContext);
+  const { userList } = useContext(UserContext);
   return (
     <div className="dashboard">
       <div className="dashboard-header">
@@ -29,8 +29,8 @@ export default function Users() {
           <p className="date">Date</p>
           <p></p>
         </div>
-        {usersList &&
-          usersList.map((e, index) => {
+        {userList &&
+          userList.map((e, index) => {
             return (
               <div className="user" key={index}>
                 <p className="id">#{e.userId}</p>

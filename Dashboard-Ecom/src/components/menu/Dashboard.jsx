@@ -20,15 +20,15 @@ export default function Dashboard() {
           <p>Сүүлд зарагдсан</p>
         </div>
         <div className="dashboard-products">
-          {data.slice(0, 6).map((e, index) => {
+          {data.map((product, index) => {
             return (
               <div className="dashboard-product" key={index}>
                 <img
                   className="dashboard-product-image"
-                  src={e.image}
+                  src={product.image}
                   alt="product image"
                 />
-                <p className="dashboard-product-name">{e.name}</p>
+                <p className="dashboard-product-name">{product.name}</p>
               </div>
             );
           })}

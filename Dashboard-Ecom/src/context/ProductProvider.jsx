@@ -9,9 +9,9 @@ export default function Handlers({ children }) {
   const [edit, setedit] = useState(false);
   const [isAction, setIsAction] = useState(2);
   const [getSpec, setSpec] = useState([]);
-  const length = data?.length;
 
   const handleClose = () => setShow(false);
+  const user = JSON.parse(localStorage.getItem("currentUser"));
   function handleShow(product) {
     setShow(true);
     if (product) {
@@ -19,11 +19,10 @@ export default function Handlers({ children }) {
       setSpec(product.spec);
     }
   }
-  function deleteHandler(name) {
+  function deleteHandler(id) {
     axios
-      .delete(`http://localhost:2020/productDel?name=${name}`, {
-        role: "admin",
-        name: "a",
+      .post(`http://localhost:2020/productDel?id=${id}`, {
+        role: `${user && user.role}`,
       })
       .then((res) => res.statusText === "OK" && alert("delete"));
     setIsAction(isAction + 1);
@@ -48,7 +47,6 @@ export default function Handlers({ children }) {
         deleteHandler,
         setedit,
         editProduct,
-        length,
         setIsAction,
         isAction,
       }}

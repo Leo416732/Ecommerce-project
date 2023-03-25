@@ -2,12 +2,14 @@ import { useContext } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { useNavigate } from "react-router-dom";
 import { ProductContext } from "../../context/ProductsContext";
+import { ThemeContext } from "../../context/Theme";
 import "../../styles/slider.css";
 
 function CarouselProd() {
   const { data } = useContext(ProductContext);
   const navigate = useNavigate();
-  let themeMode = localStorage.getItem("theme");
+  const { themeMode } = useContext(ThemeContext);
+
   return (
     <div className={themeMode == "light" ? "slideLight" : "slideDark"}>
       <Carousel variant="light">

@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 const config = process.env;
 
 const verifyToken = (req, res, next) => {
-  const token = req.body.token;
+  const token = req.body.token || req.query.role;
 
   if (!token) {
     return res.status(403).json({

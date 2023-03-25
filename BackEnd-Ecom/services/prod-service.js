@@ -12,30 +12,29 @@ const date = moment().format("llll");
 
 //post product
 export async function postProduct(newProd) {
-  console.log(newProd);
-  const category = await Category.find({
-    name: newProd.category,
-  });
+  newProd.map(async (pro) => {
+    const category = await Category.find({
+      name: pro.category,
+    });
 
-  console.log(category);
-
-  return await Products.create({
-    name: newProd.name,
-    price: newProd.price,
-    stock: newProd.stock,
-    sale: newProd.sale,
-    category: category[0]._id,
-    description: newProd.description,
-    spec: newProd.spec,
-    created_date: date,
-    update_date: date,
-    image: newProd.image,
+    return await Products.create({
+      name: pro.name,
+      price: pro.price,
+      stock: pro.stock,
+      sale: pro.sale,
+      category: category[0]._id,
+      description: pro.description,
+      spec: pro.spec,
+      created_date: date,
+      update_date: date,
+      image: pro.image,
+    });
   });
 }
 
 //delete product
-export async function deleteProduct(deleteProName) {
-  return await Products.deleteOne({ name: deleteProName });
+export async function deleteProduct(deleteProId) {
+  return await Products.deleteOne({ _id: deleteProId });
 }
 
 //update product

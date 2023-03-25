@@ -28,10 +28,13 @@ export default function Products() {
 
   function selectCate(name) {
     if (name == "all") {
-      setProducts(data);
+      setProducts();
     } else {
       let filterProduct =
-        data && data.filter((prod) => prod.category.name === name);
+        data &&
+        data.filter(
+          (prod) => prod.category.name.toLowerCase() === name.toLowerCase()
+        );
       setProducts(filterProduct);
     }
   }
@@ -87,21 +90,15 @@ export default function Products() {
           <p className="product-categ">Категори</p>
         </div>
         <div>
-          {products
-            ? products
-                .slice(0 + 8 * (number - 1), 8 + 8 * (number - 1))
-                .map((product, index) => (
-                  <Product key={index} product={product} />
-                ))
-            : data
-                .slice(0 + 8 * (number - 1), 8 + 8 * (number - 1))
-                .map((product, index) => (
-                  <Product key={index} product={product} />
-                ))}
+          {(products ? products : data)
+            .slice(0 + 8 * (number - 1), 8 + 8 * (number - 1))
+            .map((product, index) => (
+              <Product key={index} product={product} />
+            ))}
         </div>
       </div>
       <div>
-        <Pagination />
+        <Pagination length={products ? products.length : data.length} />
       </div>
     </div>
   );

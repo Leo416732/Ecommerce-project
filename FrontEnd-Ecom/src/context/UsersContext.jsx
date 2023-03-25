@@ -35,7 +35,9 @@ export default function UsersContext({ children }) {
   function logoutHandler() {
     localStorage.removeItem("currentUser");
     localStorage.removeItem("jwt");
+    localStorage.removeItem("currentBtn");
     setCurrentUser();
+    navigate("/");
   }
   return (
     <UserContext.Provider value={{ loginHandler, logoutHandler, currentUser }}>
