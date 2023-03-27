@@ -19,6 +19,7 @@ export default function AdminHeader() {
       alert("something write");
     }
   }
+
   return (
     <div className="navbar">
       <div className="navbar-logo">

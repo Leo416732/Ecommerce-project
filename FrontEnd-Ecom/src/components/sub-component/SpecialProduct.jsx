@@ -5,6 +5,7 @@ import "../../styles/special.css";
 
 export default function SpecialProduct() {
   const { data } = useContext(ProductContext);
+
   return (
     <div className="special container">
       <div>

@@ -3,7 +3,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import ProductCard from "./components/sub-component/ProductCard";
 import Search from "./pages/Search";
-import Main from "./pages/Main";
+import MainOutlet from "./pages/Main-Outlet";
 import Settings from "./pages/Settings";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "./context/Theme";
@@ -12,7 +12,9 @@ import axios from "axios";
 
 function App() {
   const { themeMode } = useContext(ThemeContext);
+
   const token = localStorage.getItem("jwt");
+
   useEffect(() => {
     token &&
       axios
@@ -24,7 +26,7 @@ function App() {
     <div className={themeMode == "light" ? "App light" : "App dark"}>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Main />}>
+        <Route path="/" element={<MainOutlet />}>
           <Route index element={<Profile />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/profile/settings" element={<Settings />} />

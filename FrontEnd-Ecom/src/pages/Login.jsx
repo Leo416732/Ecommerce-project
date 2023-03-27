@@ -14,13 +14,13 @@ export default function Login() {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
 
-  //loginHandler
+  //user login handler
   function loginHandle(e) {
     e.preventDefault();
     loginHandler(e.target.email.value, e.target.password.value);
   }
 
-  //register
+  //user register handler
   function register() {
     if (email === "") {
       alert("wrong");
@@ -36,6 +36,7 @@ export default function Login() {
         .then((res) => alert(res.data.message));
     }
   }
+
   return (
     <div className="body">
       <div className={themeMode == "light" ? "Login" : "Login dark"}>

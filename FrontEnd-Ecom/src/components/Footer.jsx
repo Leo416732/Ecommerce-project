@@ -8,6 +8,7 @@ import "../styles/footer.css";
 
 export default function Footer() {
   const { themeMode } = useContext(ThemeContext);
+
   return (
     <>
       <footer className={themeMode == "light" ? "footerLight" : "footerDark"}>

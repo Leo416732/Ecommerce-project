@@ -30,7 +30,7 @@ export default function ProductCanvas({ categories }) {
   }
   function put(obj) {
     axios
-      .put(`http://localhost:2020/productPut?name=${editProduct._id}`, obj)
+      .put(`http://localhost:2020/productPut?_id=${editProduct._id}`, obj)
       .then((res) => res.statusText === "OK" && alert("update"));
     setedit(false);
     setIsAction(isAction + 1);
@@ -49,7 +49,7 @@ export default function ProductCanvas({ categories }) {
       role: "user",
     };
 
-    edit ? put(obj) : post(obj, e);
+    editProduct ? put(obj) : post(obj, e);
   }
 
   function deleteSpecHandle(name) {

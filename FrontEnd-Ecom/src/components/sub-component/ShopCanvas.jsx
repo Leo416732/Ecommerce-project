@@ -12,10 +12,12 @@ import { ThemeContext } from "../../context/Theme";
 export default function ShopCanvas() {
   const { handleClose, cardProd, handleShow, stocks, show, totalPrice } =
     useContext(BasketContext);
-
   const { themeMode } = useContext(ThemeContext);
+
+  // localStorage get item
   let baskets = JSON.parse(localStorage.getItem("baskets"));
 
+  //delete product handler
   function deleteProductHandle(id) {
     let deleteProduct =
       baskets && baskets.filter((delProd) => delProd._id !== id);

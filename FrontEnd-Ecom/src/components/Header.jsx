@@ -14,11 +14,13 @@ export default function Header() {
   const [val, setVal] = useState("");
   const navigate = useNavigate();
 
+  //search product handlerx
   function handleSearch() {
     if (val !== "") {
       navigate(`/search/${val}`);
     }
   }
+
   let currentUserName =
     currentUser && JSON.parse(localStorage.getItem("currentUser")).name;
   return (

@@ -12,41 +12,45 @@ export default function ProductCard() {
   const test = useParams();
   const { themeMode } = useContext(ThemeContext);
 
+  //main product
   let productDeatail = data && data.filter((prod) => prod._id === test.id);
 
+  //count add
   function addCount() {
-    // let baskets = JSON.parse(localStorage.getItem("baskets")).find(
-    //   (a) => a._id === productDeatail[0]._id
-    // );
-    // console.log(baskets.stock);
-    if (
-      x < productDeatail[0].stock
-      // productDeatail[0].stock >= baskets.stock + x
-    ) {
+    if (x < productDeatail[0].stock) {
       setX(x + 1);
     }
   }
+
+  //count minus
   function minusCount() {
     if (x > 0) {
       setX(x - 1);
     }
   }
-  let minPro =
+  //min products
+  let subProducts =
     data &&
     data.filter(
       (subProd) =>
         subProd.category.name === productDeatail[0].category.name &&
         subProd._id !== productDeatail[0]._id
     );
-  function addCard() {
+
+  //basket add handler
+  function addBasket() {
     setCount((prev) => prev + 1);
     let baskets = [];
     setX(0);
+
+    //basket add id and stock
     if (localStorage.getItem("baskets")) {
       baskets = JSON.parse(localStorage.getItem("baskets"));
+      //find product
       const findData = baskets.find(
         (product) => product._id === productDeatail[0]._id
       );
+
       if (findData && findData.stock < productDeatail[0].stock) {
         baskets[baskets.indexOf(findData)].stock =
           baskets[baskets.indexOf(findData)].stock + x;
@@ -118,13 +122,13 @@ export default function ProductCard() {
                 </button>
               </p>
               <button
-                onClick={addCard}
+                onClick={addBasket}
                 className={themeMode == "light" ? "buy" : "buyDark"}
               >
                 Add to card
               </button>
               <button
-                onClick={addCard}
+                onClick={addBasket}
                 className={themeMode == "light" ? "buy now" : "buyDark now"}
               >
                 Buy it now
@@ -163,8 +167,8 @@ export default function ProductCard() {
           </div>
         </div>
         <div className="min-pro container">
-          {minPro &&
-            minPro
+          {subProducts &&
+            subProducts
               .slice(0, 4)
               .map((e, index) => <Product product={e} key={index} />)}
         </div>

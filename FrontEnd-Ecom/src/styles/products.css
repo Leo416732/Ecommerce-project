@@ -64,6 +64,7 @@
   border: none;
   width: 130px;
   height: 60px;
+  border: 0.1px solid #fff;
 }
 .nav-title {
   font-family: Poppins;

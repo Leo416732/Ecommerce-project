@@ -7,8 +7,8 @@ import "../../styles/slider.css";
 
 function CarouselProd() {
   const { data } = useContext(ProductContext);
-  const navigate = useNavigate();
   const { themeMode } = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   return (
     <div className={themeMode == "light" ? "slideLight" : "slideDark"}>

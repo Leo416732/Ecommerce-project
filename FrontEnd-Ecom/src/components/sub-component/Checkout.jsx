@@ -16,14 +16,14 @@ export default function Checkout() {
 
   let basketDeatail = [];
 
+  // buy products handler
   function checkOutHandle(e) {
     e.preventDefault();
-    if (e.target.address.value === "") {
-      alert("address is undefined");
-    } else if (e.target.phone.value === "") {
-      alert("phone is undefined");
+    if (e.target.address.value === "" || e.target.phone.value === "") {
+      alert("something wrong");
     } else {
       setShowModal(false);
+
       baskets &&
         baskets.map((basketProd) => {
           basketDeatail.push({
@@ -31,6 +31,7 @@ export default function Checkout() {
             quentity: basketProd.stock,
           });
         });
+
       axios.post("http://localhost:2020/orders", {
         address: e.target.address.value,
         orderDeatail: basketDeatail,
@@ -42,6 +43,7 @@ export default function Checkout() {
         email: currentUser,
       });
     }
+
     basketDeatail.forEach((basketProduct) => {
       axios.put(`http://localhost:2020/product/${basketProduct.orderId}`, {
         stock: basketProduct.quentity,
