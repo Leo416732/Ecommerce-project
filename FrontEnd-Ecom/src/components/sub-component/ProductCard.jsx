@@ -15,7 +15,7 @@ export default function ProductCard() {
   //main product
   let productDeatail = data && data.filter((prod) => prod._id === test.id);
 
-  //count add
+  //count add .
   function addCount() {
     if (x < productDeatail[0].stock) {
       setX(x + 1);
