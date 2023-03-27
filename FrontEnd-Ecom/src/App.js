@@ -19,6 +19,7 @@ function App() {
         .post("http://localhost:2020/protected", { token })
         .then((res) => console.log(res));
   });
+
   return (
     <div className={themeMode == "light" ? "App light" : "App dark"}>
       <Routes>
