@@ -39,13 +39,16 @@ export async function deleteProduct(deleteProId) {
 
 //update product
 export async function putProduct(_id, newProd) {
+  const category = await Category.find({
+    name: newProd.category,
+  });
   return await Products.updateOne(
-    { _id },
+    { _id: `${_id}` },
     {
       name: newProd.name,
       price: newProd.price,
       stock: newProd.stock,
-      category: newProd.category,
+      category: category[0].id,
       description: newProd.description,
       spec: newProd.spec,
       update_date: date,
