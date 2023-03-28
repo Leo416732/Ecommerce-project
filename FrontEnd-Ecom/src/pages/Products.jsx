@@ -10,11 +10,14 @@ export default function Products() {
   const { data } = useContext(ProductContext);
   const { themeMode } = useContext(ThemeContext);
 
-  let currentBtn = JSON.parse(localStorage.getItem("currentBtn"));
+  let currentBtn =
+    localStorage.getItem("currentBtn") === "all"
+      ? localStorage.getItem("currentBtn")
+      : JSON.parse(localStorage.getItem("currentBtn"));
   const [products, setProducts] = useState();
   const [categories, setCategories] = useState();
   const [activeBtn, setActiveBtn] = useState(
-    currentBtn && currentBtn == "all" ? "all" : currentBtn.name
+    !currentBtn || currentBtn == "all" ? "all" : currentBtn.name
   );
 
   useEffect(() => {

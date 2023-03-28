@@ -4,7 +4,7 @@ dotenv.config();
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.MONGODB_PASSWORD}@leo.s9beivo.mongodb.net/ecommerce`
+    `mongodb+srv://Leo:${process.env.MONGODB_PASSWORD}@leo.s9beivo.mongodb.net/ecommerce`
   )
   .then(() => console.log("connect"));
 

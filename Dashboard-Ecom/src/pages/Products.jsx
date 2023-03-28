@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import ProductCanvas from "../components/sub/ProductCanvas";
 import Product from "./Product";
 import Pagination from "../components/sub/Pagination";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { ProductsContext } from "../context/ProductProvider";
 import CategoryCanvas from "../components/sub/CategoryCanvas";
@@ -14,6 +14,7 @@ export default function Products() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState();
   const pageNum = useParams();
+  const navi = useNavigate();
   const number = pageNum.id;
 
   const [show, setShow] = useState(false);
@@ -37,6 +38,7 @@ export default function Products() {
         );
       setProducts(filterProduct);
     }
+    navi("/products/page/1");
   }
 
   return (

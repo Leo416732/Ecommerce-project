@@ -54,14 +54,13 @@ export default function Login() {
             <div className="border"></div>
           </div>
           <div>
-            <button
-              type="button btn"
+            <input
+              type="button"
               className="registerBtn"
               data-bs-target="#exampleModal"
               data-bs-toggle="modal"
-            >
-              Register
-            </button>
+              value="Register"
+            />
 
             <div
               className="modal fade"
