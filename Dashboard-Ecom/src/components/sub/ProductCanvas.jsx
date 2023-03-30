@@ -14,7 +14,6 @@ export default function ProductCanvas({ categories }) {
     getSpec,
     setSpec,
     show,
-    edit,
     setIsAction,
     isAction,
   } = useContext(ProductsContext);

@@ -2,24 +2,38 @@ import { useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Product from "../../pages/Product";
 import { ProductContext } from "../../context/ProductsContext";
-import "../../styles/productcard.css";
 import { ThemeContext } from "../../context/Theme";
+import { useEffect } from "react";
+import "../../styles/productcard.css";
 
 export default function ProductCard() {
   const { data, setCount } = useContext(ProductContext);
   const [x, setX] = useState(1);
-  const navigate = useNavigate();
-  const test = useParams();
+
   const { themeMode } = useContext(ThemeContext);
+  const param = useParams();
+  const navigate = useNavigate();
 
   //main product
-  let productDeatail = data && data.filter((prod) => prod._id === test.id);
+  let productDeatail = data && data.find((prod) => prod._id === param.id);
+  const [stock, setStock] = useState(
+    (prev) => prev == undefined && localStorage.getItem("a")
+  );
+
+  useEffect(() => {
+    if (localStorage.getItem("baskets")) {
+      let baskets = JSON.parse(localStorage.getItem("baskets"));
+      let item = baskets.find((prod) => {
+        return prod._id === param.id;
+      });
+
+      item && setStock(productDeatail?.stock - item.stock);
+    }
+  }, [param, localStorage.getItem("baskets")]);
 
   //count add .
   function addCount() {
-    if (x < productDeatail[0].stock) {
-      setX(x + 1);
-    }
+    x < productDeatail.stock && setX(x + 1);
   }
 
   //count minus
@@ -33,35 +47,38 @@ export default function ProductCard() {
     data &&
     data.filter(
       (subProd) =>
-        subProd.category.name === productDeatail[0].category.name &&
-        subProd._id !== productDeatail[0]._id
+        subProd.category.name === productDeatail.category.name &&
+        subProd._id !== productDeatail._id
     );
 
   //basket add handler
   function addBasket() {
-    setCount((prev) => prev + 1);
-    let baskets = [];
-    setX(0);
-
-    //basket add id and stock
-    if (localStorage.getItem("baskets")) {
-      baskets = JSON.parse(localStorage.getItem("baskets"));
-      //find product
-      const findData = baskets.find(
-        (product) => product._id === productDeatail[0]._id
-      );
-
-      if (findData && findData.stock < productDeatail[0].stock) {
-        baskets[baskets.indexOf(findData)].stock =
-          baskets[baskets.indexOf(findData)].stock + x;
-        baskets = [...baskets];
-      } else {
-        baskets = [...baskets, { _id: productDeatail[0]._id, stock: x }];
-      }
+    if (stock < 4) {
     } else {
-      baskets = [...baskets, { _id: productDeatail[0]._id, stock: x }];
+      setCount((prev) => prev + 1);
+      let baskets = [];
+      setX(0);
+
+      //basket add id and stock
+      if (localStorage.getItem("baskets")) {
+        baskets = JSON.parse(localStorage.getItem("baskets"));
+        //find product
+        const findData = baskets.find(
+          (product) => product._id === productDeatail._id
+        );
+
+        if (findData && findData.stock < productDeatail.stock) {
+          baskets[baskets.indexOf(findData)].stock =
+            baskets[baskets.indexOf(findData)].stock + x;
+          baskets = [...baskets];
+        } else {
+          baskets = [...baskets, { _id: productDeatail._id, stock: x }];
+        }
+      } else {
+        baskets = [...baskets, { _id: productDeatail._id, stock: x }];
+      }
+      localStorage.setItem("baskets", JSON.stringify(baskets));
     }
-    localStorage.setItem("baskets", JSON.stringify(baskets));
   }
   return (
     <>
@@ -74,16 +91,16 @@ export default function ProductCard() {
                   <a href="/profile">Home</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                  {productDeatail && productDeatail[0].category.name}
+                  {productDeatail && productDeatail.category.name}
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
-                  {productDeatail && productDeatail[0].name}
+                  {productDeatail && productDeatail.name}
                 </li>
               </ol>
             </nav>
             <img
               className="img"
-              src={productDeatail && productDeatail[0].image}
+              src={productDeatail && productDeatail.image}
               alt=""
             />
             <div className="backbtn" onClick={() => navigate(-1)}>
@@ -92,20 +109,17 @@ export default function ProductCard() {
           </div>
           <div>
             <div className="spec">
-              <h5 className="title">
-                {productDeatail && productDeatail[0].name}
-              </h5>
+              <h5 className="title">{productDeatail && productDeatail.name}</h5>
               <h5 className="price">
-                ${productDeatail && productDeatail[0].price}
+                ${productDeatail && productDeatail.price}
               </h5>
               <p className="stock">
-                Hurry up! only {productDeatail && productDeatail[0].stock}{" "}
-                product left in stock!
+                Hurry up! only {stock} product left in stock!
               </p>
             </div>
             <div className="second mt-2">
               <p className="sale">
-                Sale: {productDeatail && productDeatail[0].sale}%
+                Sale: {productDeatail && productDeatail.sale}%
               </p>
               <p className="quant">
                 Quantity:
@@ -115,7 +129,7 @@ export default function ProductCard() {
                 <input
                   onChange={(e) => setX(Number(e.target.value))}
                   className="x"
-                  value={productDeatail && x <= productDeatail[0].stock ? x : 0}
+                  value={productDeatail && x <= productDeatail.stock ? x : 0}
                 />
                 <button className="trans" onClick={addCount}>
                   +
@@ -136,7 +150,7 @@ export default function ProductCard() {
             </div>
             <div className="third">
               {productDeatail &&
-                productDeatail[0].spec.map((one, index) => (
+                productDeatail.spec.map((one, index) => (
                   <div className="text-dark" key={index}>
                     <div className="d-flex">
                       <p className="keys">{Object.keys(one)[0]}</p>:
@@ -162,7 +176,7 @@ export default function ProductCard() {
           </p>
           <div className="collapse" id="collapseExample">
             <div className="card-body">
-              {productDeatail && productDeatail[0].description}
+              {productDeatail && productDeatail.description}
             </div>
           </div>
         </div>

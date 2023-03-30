@@ -23,7 +23,14 @@ export default function AdminHeader() {
   return (
     <div className="navbar">
       <div className="navbar-logo">
-        <a href="">
+        <a
+          onClick={() => {
+            return (
+              navigate("/controlBoard"),
+              localStorage.setItem("pageName", "DashBoard")
+            );
+          }}
+        >
           <Logo />
         </a>
       </div>

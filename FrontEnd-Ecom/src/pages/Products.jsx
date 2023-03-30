@@ -1,6 +1,6 @@
 import Product from "./Product";
 import "../styles/products.css";
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import { ProductContext } from "../context/ProductsContext";
 import { ThemeContext } from "../context/Theme";
 import { useEffect } from "react";
@@ -9,6 +9,7 @@ import axios from "axios";
 export default function Products() {
   const { data } = useContext(ProductContext);
   const { themeMode } = useContext(ThemeContext);
+  const ref = useRef(null);
 
   let currentBtn =
     localStorage.getItem("currentBtn") === "all"
@@ -47,6 +48,16 @@ export default function Products() {
     localStorage.setItem("currentBtn", JSON.stringify(category));
   }
 
+  // useEffect(() => {
+  //   window.addEventListener("scrollend", () => {
+  //     if (ref.scrollEnd) {
+  //       // setShowTopBtn(true);
+  //       console.log("work");
+  //     } else {
+  //       // setShowTopBtn(false);
+  //     }
+  //   });
+  // }, []);
   return (
     <div className={themeMode == "light" ? "light" : "dark"}>
       <div className="nav container">
@@ -72,7 +83,8 @@ export default function Products() {
             );
           })}
       </div>
-      <div className="products">
+      {/* <button onClick={() => handleScrll()}>a</button> */}
+      <div className="products" id="products" ref={ref}>
         {products &&
           products.map((pro, index) => <Product product={pro} key={index} />)}
       </div>

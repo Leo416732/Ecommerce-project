@@ -1,4 +1,4 @@
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes, useNavigate, useParams } from "react-router-dom";
 import Dashboard from "./components/menu/Dashboard";
 import Moderator from "./components/menu/Moderator";
 import Orders from "./components/menu/Orders";
@@ -16,6 +16,7 @@ function App() {
   const { currentUser, setCurrentUser } = useContext(UserContext);
   const token = localStorage.getItem("jwt");
   const param = useParams();
+  const navigate = useNavigate();
   useEffect(() => {
     !param == "login" &&
       token &&
@@ -32,10 +33,23 @@ function App() {
           )
         );
   });
+
+  useEffect(() => {
+    JSON.parse(localStorage.getItem("currentUser"))
+      ? navigate("/")
+      : navigate("/login");
+  }, []);
+  // let pa = JSON.parse(localStorage.getItem("pageName"));
+
+  // useEffect(() => {
+  //   if (page == "Products") {
+  //     navigate("/products/page/1");
+  //   }
+  // }, []);
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/login" element={<Login />} />
         {currentUser ? (
           <>
             <Route path="/search/:name" element={<Search />} />
@@ -50,7 +64,7 @@ function App() {
             </Route>
           </>
         ) : (
-          <></>
+          <Route path="/login" element={<Login />} />
         )}
       </Routes>
     </div>
