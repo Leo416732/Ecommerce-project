@@ -80,6 +80,7 @@ export default function ProductCard() {
       localStorage.setItem("baskets", JSON.stringify(baskets));
     }
   }
+
   return (
     <>
       <div className="oneProduct">

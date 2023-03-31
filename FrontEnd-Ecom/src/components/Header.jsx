@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <header className={themeMode == "light" ? "headerLight" : "headerDark"}>
       <div className="header-navbar container">
-        <div className="header-logo" onClick={() => navigate("/profile")}>
+        <div className="header-logo" onClick={() => navigate("/main")}>
           <Logo />
         </div>
         <div className="header-navbar-search">

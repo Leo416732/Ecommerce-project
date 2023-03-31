@@ -26,7 +26,7 @@ export default function UsersContext({ children }) {
         if (res.data.success == true) {
           localStorage.setItem("currentUser", JSON.stringify(res.data.data)),
             setCurrentUser(res.data.data),
-            navigate("/profile");
+            navigate("/main");
           localStorage.setItem("jwt", res.data.token);
         }
       })

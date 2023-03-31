@@ -5,7 +5,7 @@ import CarouselProd from "../components/sub-component/CarouselProd";
 import { useContext } from "react";
 import { ThemeContext } from "../context/Theme";
 
-export default function Profile() {
+export default function Main() {
   const { themeMode } = useContext(ThemeContext);
   return (
     <>

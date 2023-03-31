@@ -48,16 +48,6 @@ export default function Products() {
     localStorage.setItem("currentBtn", JSON.stringify(category));
   }
 
-  // useEffect(() => {
-  //   window.addEventListener("scrollend", () => {
-  //     if (ref.scrollEnd) {
-  //       // setShowTopBtn(true);
-  //       console.log("work");
-  //     } else {
-  //       // setShowTopBtn(false);
-  //     }
-  //   });
-  // }, []);
   return (
     <div className={themeMode == "light" ? "light" : "dark"}>
       <div className="nav container">
@@ -83,7 +73,6 @@ export default function Products() {
             );
           })}
       </div>
-      {/* <button onClick={() => handleScrll()}>a</button> */}
       <div className="products" id="products" ref={ref}>
         {products &&
           products.map((pro, index) => <Product product={pro} key={index} />)}
