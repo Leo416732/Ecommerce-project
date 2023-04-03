@@ -3,7 +3,6 @@ import axios from "axios";
 import React from "react";
 
 export default function AxiosConfig({ children }) {
-  a;
   axios.interceptors.request.use(
     function (request) {
       console.log("intercepting request: ", request);
