@@ -89,7 +89,7 @@ export default function ProductCard() {
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item active">
-                  <a href="/profile">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   {productDeatail && productDeatail.category.name}

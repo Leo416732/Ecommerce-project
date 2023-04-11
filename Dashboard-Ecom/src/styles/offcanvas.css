@@ -48,3 +48,6 @@ label {
   margin: 20px 0;
   flex-wrap: wrap;
 }
+.desc {
+  width: 143%;
+}

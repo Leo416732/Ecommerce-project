@@ -154,6 +154,7 @@ export default function ProductCanvas({ categories }) {
                 <div className="offcanvas-product-name">
                   <label>Тайлбар</label>
                   <input
+                    className="desc"
                     name="desc"
                     type="text"
                     defaultValue={editProduct && editProduct.description}

@@ -32,13 +32,13 @@ function App() {
             setCurrentUser(res.data.data)
           )
         );
-  });
-
-  useEffect(() => {
-    JSON.parse(localStorage.getItem("currentUser"))
-      ? navigate("/")
-      : navigate("/login");
   }, []);
+
+  // useEffect(() => {
+  //   JSON.parse(localStorage.getItem("currentUser"))
+  //     ? navigate("/")
+  //     : navigate("/login");
+  // }, []);
   // let pa = JSON.parse(localStorage.getItem("pageName"));
 
   // useEffect(() => {
@@ -50,22 +50,19 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        {currentUser ? (
-          <>
-            <Route path="/search/:name" element={<Search />} />
-            <Route path="/" element={<Main />}>
-              <Route index element={<Dashboard />} />
-              <Route path="/controlBoard" element={<Dashboard />} />
-              <Route path="/products/page/:id" element={<Products />} />
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/users" element={<Users />} />
-              <Route path="/mod" element={<Moderator />} />
-              <Route path="/settings" element={<Settings />} />
-            </Route>
-          </>
-        ) : (
+        <>
+          <Route path="/search/:name" element={<Search />} />
+          <Route path="/" element={<Main />}>
+            <Route index element={<Dashboard />} />
+            <Route path="/controlBoard" element={<Dashboard />} />
+            <Route path="/products/page/:id" element={<Products />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/mod" element={<Moderator />} />
+            <Route path="/settings" element={<Settings />} />
+          </Route>
           <Route path="/login" element={<Login />} />
-        )}
+        </>
       </Routes>
     </div>
   );
